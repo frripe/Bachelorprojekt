@@ -1,3 +1,16 @@
+/dataset
+/Homepage of Rasmus R. Paulsen_files
+/ImageMagick-7.1.0-6
+/MasterThesis
+/matlab_R2021a_glnxa64
+/references
+/weekly_reports
+*.html
+*.pptx
+*.gz
+*.zip
+/mødeMedJosefineNoter
+
 # Prerequisites
 *.d
 

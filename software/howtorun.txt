@@ -1,0 +1,39 @@
+To run all:
+    runAll.sh
+
+Vizualise output:
+    ./visualize_output.sh
+    
+
+Run FM (kanjar.py):
+    mv FM/output/time.txt FM/output/time_old.txt
+    python3 FM/kanjar.py <<< "../dataset/png/Blurry/" > FM/output/out_blur.txt
+    python3 FM/kanjar.py <<< "../dataset/png/NoProblems/" > FM/output/out_no_problems.txt
+    python3 FM/kanjar.py <<< "../dataset/png/synth_blurry/" > FM/output/out_synth_blur.txt
+    python3 FM/kanjar.py <<< "../dataset/png/synth_no_problems/" > FM/output/out_synth_no_problems.txt
+
+
+Histogram frequency-based:
+Dependencies:
+    sudo apt-get install libjpeg-dev
+    sudo apt-get install -y jam
+run "jam" from root folder (/home/freja/Documents/DTU/bachelor/software/Histogram-Frequency-based)
+run:
+    ./runHF.sh
+
+
+CPBD:
+    mv cpbd/output/time.txt cpbd/output/time_old.txt
+    python3 cpbd/run_cpbd.py <<< "../dataset/bmp/Blurry/" > cpbd/output/out_blur.txt
+    python3 cpbd/run_cpbd.py <<< "../dataset/bmp/NoProblems/" > cpbd/output/out_no_problems.txt
+    python3 cpbd/run_cpbd.py <<< "../dataset/bmp/synth_blurry/" > cpbd/output/out_synth_blur.txt
+    python3 cpbd/run_cpbd.py <<< "../dataset/bmp/synth_no_problems/" > cpbd/output/out_synth_no_problems.txt
+
+
+laplacian_variance:
+    mv laplacian_variance/output/time.txt laplacian_variance/output/time_old.txt
+    python3 laplacian_variance/process.py -i ../dataset/jpg/NoProblems/ > laplacian_variance/output/out_no_problems.txt
+    python3 laplacian_variance/process.py -i ../dataset/jpg/Blurry/ > laplacian_variance/output/out_blur.txt
+    python3 laplacian_variance/process.py -i ../dataset/jpg/synth_blurry/ > laplacian_variance/output/out_synth_blur.txt
+    python3 laplacian_variance/process.py -i ../dataset/jpg/synth_no_problems/ > laplacian_variance/output/out_synth_no_problems.txt
+

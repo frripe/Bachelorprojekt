@@ -1,0 +1,33 @@
+
+BINDIR = ;
+
+#### Analysis programs
+
+CCFLAGS += -Wall -Wextra -Wno-sign-compare -pedantic -std=c99 -O3 -g -I/usr/local/include ;
+LINKFLAGS += -L/usr/local/lib ;
+
+#if $(OS) = NT { CCFLAGS += -Iw32-build ; LINKFLAGS += -Lw32-build ; }
+
+Main blur-detection : lim-yen-wu.c tong-li-zhang-zhang.c image.c ;
+LINKLIBS on blur-detection$(SUFEXE) += -lm -ljpeg ;
+
+Main marichal-ma-zhang : marichal-ma-zhang.c ;
+LINKLIBS on marichal-ma-zhang$(SUFEXE) += -lm -ljpeg ;
+
+Main tong-li-zhang-zhang : tong-li-zhang-zhang.c tlzz-main.c image.c ;
+LINKLIBS on tong-li-zhang-zhang$(SUFEXE) += -lm -ljpeg ;
+
+LOCATE on blur-detection$(SUFEXE) marichal-ma-zhang$(SUFEXE) tong-li-zhang-zhang$(SUFEXE) = $(BINDIR) ;
+
+#### Test suite
+
+rule PrepTests { Depends $(<) : $(>) ; }
+actions PrepTests { ./prep-test-suite.sh }
+PrepTests t/.prepared : prep-test-suite.sh ;
+
+ALWAYS test ;
+NOTFILE test ;
+DEPENDS all : test ;
+DEPENDS test : t/.prepared ;
+actions RunTests { prove -v t }
+RunTests test : exe ;
