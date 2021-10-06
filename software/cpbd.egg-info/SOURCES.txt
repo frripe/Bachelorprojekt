@@ -1,0 +1,6 @@
+cpbd/setup.py
+cpbd.egg-info/PKG-INFO
+cpbd.egg-info/SOURCES.txt
+cpbd.egg-info/dependency_links.txt
+cpbd.egg-info/requires.txt
+cpbd.egg-info/top_level.txt

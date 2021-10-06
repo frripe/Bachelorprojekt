@@ -1,0 +1,5 @@
+*~
+*.o
+*.pfsl
+core
+t/.prepared
