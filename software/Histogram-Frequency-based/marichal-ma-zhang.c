@@ -45,7 +45,7 @@ static float compute_blur(int *histogram)
 		if(histogram[k] < max_histogram_value*histogram[0])
 			blur += weights[k];
 	blur /= total_weight;
-	return blur;
+	return 1-blur;
 }
 
 

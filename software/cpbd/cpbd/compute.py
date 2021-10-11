@@ -30,7 +30,10 @@ BLOCK_HEIGHT, BLOCK_WIDTH = (64, 64)
 WIDTH_JNB = np.concatenate([5*np.ones(51), 3*np.ones(205)])
 
 
-def compute(image):
+def compute(image, t):
+    global THRESHOLD
+    THRESHOLD = t
+
     # type: (numpy.ndarray) -> float
     """Compute the sharpness metric for the given data."""
 

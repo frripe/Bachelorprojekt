@@ -37,6 +37,7 @@ import os
 
 import numpy as np
 import imageio
+import sys
 
 __version__ = '1.0'
 __author__ = 'Victor Augusto'
@@ -61,6 +62,11 @@ def main():
 
     file_object = open('FM/output/time.txt', 'a') # added
 
+    if len(sys.argv) > 1:
+        vary_parameter = int(sys.argv[1])
+    else:
+        vary_parameter = 1000
+
     for i in range(1, n + 1):
         # read the image
         img = imageio.imread(path + str(i) + '.png')
@@ -78,7 +84,7 @@ def main():
 
         # compute the total number of coefficients that are higher than
         # the maximum value / 1000
-        Th = abs_val[abs_val > M / 1000].size
+        Th = abs_val[abs_val > M / vary_parameter].size
         
         print(Th / img.size)
 

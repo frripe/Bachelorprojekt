@@ -6,9 +6,9 @@ from sklearn import metrics
 
 x1 = list(range(1, 48))
 y1=[]
-with open('Histogram-Frequency-based/output/out_blur.txt', 'r') as file:
+with open('Histogram-Frequency-based/output/out_blurry.txt', 'r') as file:
     y1 = file.read()
-    y1 = [1-float(i) for i in y1.split()]
+    y1 = [float(i) for i in y1.split()]
 #print(y1)
 m1 = np.mean(y1)
 y3 = [m1]*47
@@ -17,7 +17,7 @@ x2 = list(range(1, 35))#+34))
 y2=[]
 with open('Histogram-Frequency-based/output/out_no_problems.txt', 'r') as file:
     y2 = file.read()
-    y2 = [1-float(i) for i in y2.split()]
+    y2 = [float(i) for i in y2.split()]
 #print(y2)
 m2 = np.mean(y2)
 y4 = [m2]*47
@@ -25,7 +25,7 @@ print('HF mean = ' + str(round( min(m1, m2) + abs((m2-m1)/2), 3)))
 #yy = []
 #with open('Histogram-Frequency-based/output/out_synth_no_problems.txt', 'r') as file:
 #    yy = file.read()
-#    yy = [1-float(i) for i in yy.split()]
+#    yy = [float(i) for i in yy.split()]
 #yy = y2 + yy
 #
 
@@ -33,7 +33,7 @@ x0 = list(range(1, 252))
 y0=[]
 with open('Histogram-Frequency-based/output/out_synth_blurry.txt', 'r') as file:
     y0 = file.read()
-    y0 = [1-float(i) for i in y0.split()]
+    y0 = [float(i) for i in y0.split()]
 
 
 plt.ylim([0, 1])

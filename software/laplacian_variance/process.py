@@ -22,7 +22,7 @@ def parse_args():
     parser.add_argument('-i', '--images', type=str, nargs='+', required=True, help='directory of images')
     parser.add_argument('-s', '--save-path', type=str, default=None, help='path to save output')
 
-    parser.add_argument('-t', '--threshold', type=float, default=.7, help='blurry threshold')
+    parser.add_argument('-t', '--threshold', type=float, default=100, help='blurry threshold')
     parser.add_argument('-f', '--variable-size', action='store_true', help='fix the image size')
 
     parser.add_argument('-v', '--verbose', action='store_true', help='set logging level to debug')
