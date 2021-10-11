@@ -37,6 +37,10 @@ y1=[]
 with open(path + 'out_blurry.txt', 'r') as file:
     y1 = file.read()
     y1 = [float(i) for i in y1.split()]
+with open(path + 'out_synth_blurry.txt', 'r') as file:
+    f = file.read()
+    f = [float(i) for i in f.split()]
+y1 = y1 + f
 x1 = list(range(len(y1)))
 
 y2=[]
@@ -78,6 +82,7 @@ def plot_roc(y_true, y_score):
     fpr, tpr, threshold = metrics.roc_curve(y_true, y_score)
     #print(threshold)
     roc_auc = metrics.auc(fpr, tpr)
+    print("                     roc_auc: " + str(roc_auc))
     roc_display = metrics.RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=roc_auc).plot()
     plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
     plt.xlabel('False Positive Rate')
