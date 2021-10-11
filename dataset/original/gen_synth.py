@@ -1,5 +1,5 @@
 # run from dataset:
-# python3 gen_synth.py 1.5
+# python3 gen_synth.py 2
 """
  * https://datacarpentry.org/image-processing/06-blurring/
  * Python script to demonstrate Gaussian blur.
@@ -9,6 +9,7 @@
 import skimage.io
 import skimage.filters
 import sys
+import os
 import numpy as np
 from matplotlib import pyplot as plt
 from PIL import Image, ImageOps
@@ -50,40 +51,44 @@ def run_mirror(fr, to, folder, synth_folder):
             image_flip = ImageOps.flip(image)
             image_flip_mir = ImageOps.flip(image_mir)
             image_mir.save(t + '/' + synth_folder + '/' + str(i) + '.' + t, quality=95)
-            image_flip.save(t + '/' + synth_folder + '/' + str(i) + '.' + t, quality=95)
-            image_flip_mir.save(t + '/' + synth_folder + '/' + str(i) + '.' + t, quality=95)
+            image_flip.save(t + '/' + synth_folder + '/' + str(i+to-1) + '.' + t, quality=95)
+            image_flip_mir.save(t + '/' + synth_folder + '/' + str(i+to*2-2) + '.' + t, quality=95)
 
 # apply blur to all images with no problems
-def run_gaussian(sigma, truncate)#, fr1, to1, name1, name2, folder='NoProblems', synth_folder='synth_no_problems'):
+def run_gaussian(sigma, truncate):#, fr1, to1, name1, name2, folder='NoProblems', synth_folder='synth_no_problems'):
     folder = 'NoProblems'
     synth_folder = 'synth_no_problems'
     for t in types:
+        path = t + '/synth_blurry_' + str(sigma) + '/'
+        if not os.path.exists(path):
+            os.mkdir(path)
         n1 = len(os.listdir(t + '/' + folder + '/'))
-        for i in range(1, n1):
-            filename1 = t + '/' + folder + '/' + str(i) + '.' + t
-            image1 = skimage.io.imread(fname=filename1)
-            blurred1 = (skimage.filters.gaussian(
-                image1, sigma=(sigma, sigma), truncate=truncate, multichannel=True
+        for i in range(1, n1+1):
+            filename = t + '/' + folder + '/' + str(i) + '.' + t
+            image = skimage.io.imread(fname=filename)
+            blurred = (skimage.filters.gaussian(
+                image, sigma=(sigma, sigma), truncate=truncate, multichannel=True
             ) * 255).astype(np.uint8)
-            skimage.io.imsave(t + '/synth_blurry_' + str(sigma) + '/' + str(i) + '.' + t, blurred1, check_contrast=False)
+            skimage.io.imsave(path + str(i) + '.' + t, blurred, check_contrast=False)
 
-        n2 = len(os.listdir(t + '/' + folder + '/'))
-        for i in range(n1, n2+n1):
-            filename2 = t + '/' + synth_folder + '/' + str(i) + '.' + t
-            image2 = skimage.io.imread(fname=filename2)
-            blurred2 = (skimage.filters.gaussian(
-                image2, sigma=(sigma, sigma), truncate=truncate, multichannel=True
+        n2 = len(os.listdir(t + '/' + synth_folder + '/'))
+        for i in range(1, n2+1):
+            print(n1, n2, i)
+            filename = t + '/' + synth_folder + '/' + str(i) + '.' + t
+            image = skimage.io.imread(fname=filename)
+            blurred = (skimage.filters.gaussian(
+                image, sigma=(sigma, sigma), truncate=truncate, multichannel=True
             ) * 255).astype(np.uint8)
-            skimage.io.imsave(t + '/synth_blurry_' + str(sigma) + '/' + str(i) + '.' + t, blurred2, check_contrast=False)
+            skimage.io.imsave(path + str(i+n1) + '.' + t, blurred, check_contrast=False)
 
 # run
 run_mirror(1, 48, 'Blurry',            'synth_blurry')
-run_mirror(1, 52, 'Earwax',            'synth_earwax')
+#run_mirror(1, 52, 'Earwax',            'synth_earwax')
 run_mirror(1, 35, 'NoProblems',        'synth_no_problems')
-run_mirror(1, 21, 'NoVisibleMembrane', 'synth_no_visible_membrane')
-run_gaussian(s,   get_truncate(s, r))
-run_gaussian(s*2, get_truncate(s*2, r))
-run_gaussian(s*3, get_truncate(s*4, r))
+#run_mirror(1, 21, 'NoVisibleMembrane', 'synth_no_visible_membrane')
+run_gaussian(s,     get_truncate(s, r))
+run_gaussian(s*1.5, get_truncate(s*2, r))
+run_gaussian(s*2,   get_truncate(s*4, r))
 
 
 
