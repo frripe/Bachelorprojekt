@@ -58,18 +58,22 @@ def main():
     path = str(input()).rstrip()
 
     # amount of images in the folder
-    n = len(os.listdir(path))
+#    n = len(os.listdir(path))
+    n = os.listdir(path)
 
     file_object = open('FM/output/time.txt', 'a') # added
 
     if len(sys.argv) > 1:
         vary_parameter = int(sys.argv[1])
+#        print("vary_parameter: " + str(vary_parameter))
     else:
         vary_parameter = 1000
 
-    for i in range(1, n + 1):
+#    for i in range(1, n + 1):
+    for elem in n:
         # read the image
-        img = imageio.imread(path + str(i) + '.png')
+#        img = imageio.imread(path + str(i) + '.png')
+        img = imageio.imread(path + elem)
 
         time_start = time.time() # added
 

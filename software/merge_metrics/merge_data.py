@@ -40,6 +40,11 @@ print(scores1[0], scores2[0])
 print(scores[0])
 write_to_file(scores, path3, 'out_blurry.txt')
 
+scores1 = open_scores(path1, 'out_synth_blurry.txt')
+scores2 = open_scores(path2, 'out_synth_blurry.txt')
+scores = comp_scores(scores1, scores2)
+write_to_file(scores, path3, 'out_synth_blurry.txt')
+
 scores1 = open_scores(path1, 'out_no_problems.txt')
 scores2 = open_scores(path2, 'out_no_problems.txt')
 scores = comp_scores(scores1, scores2)

@@ -15,22 +15,22 @@ print(path)
 
 if(path == "laplacian_variance/output/"):
     title = "Laplacian Variance metric"
-    threshold = 0.861
+#    threshold = 0.861
 elif(path == "FM/output/"):
     title = "Frequency Domain metric"
-    threshold = 0.235
+#    threshold = 0.235
 elif(path == "Histogram-Frequency-based/output/"):
     title = "Histogram Frequency-based metric"
-    threshold = 0.454
+#    threshold = 0.454
 elif(path == "cpbd/output/"):
     title = "CPBD metric"
-    threshold = 0.375
+#    threshold = 0.375
 elif(path == 'merge_metrics/cpbd_lv/'):
     title = 'Merge of CPBD and Laplacian Variance'
-    threshold = 0.5
+#    threshold = 0.5
 else:
     title = "Merge"
-    threshold = 0.5
+#    threshold = 0.5
 
 
 y1=[]
@@ -60,8 +60,8 @@ plt.xlabel("Image no.")
 plt.ylabel("Score")
 plt.grid(True)
 plt.legend()
-plt.savefig(path + 'many_basic/' + str(no) + '_output_basic.png')
-
+#plt.savefig(path + 'many_basic/' + str(no) + '_output_basic.png')
+plt.savefig(path + 'output_basic.png')
 
 def plot_density():
     plt.clf()
@@ -76,26 +76,26 @@ def plot_density():
     plt.ylabel('Density')
     plt.title(title)
     plt.legend(loc="upper right")
-    plt.savefig(path + 'many_dens/' + str(no) + '_output_dens.png')
+#    plt.savefig(path + 'many_dens/' + str(no) + '_output_dens.png')
+    plt.savefig(path + 'output_dens.png')
 
 def plot_roc(y_true, y_score):
     fpr, tpr, threshold = metrics.roc_curve(y_true, y_score)
     #print(threshold)
     roc_auc = metrics.auc(fpr, tpr)
-    print("                     roc_auc: " + str(roc_auc))
+    print("                                 roc_auc: " + str(roc_auc))
     roc_display = metrics.RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=roc_auc).plot()
     plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
     plt.title(title)
     plt.legend(loc="lower right")
-    plt.savefig(path + 'many_roc/' + str(no) + '_output_roc.png')
+#    plt.savefig(path + 'many_roc/' + str(no) + '_output_roc.png')
+    plt.savefig(path + 'output_roc.png')
 
-print(path)
 
 plot_density()
 y_true = np.array([0]*len(y1) + [1]*len(y2))
 y_score = np.concatenate([y1, y2])
 plot_roc(y_true, y_score)
-print(path)
 

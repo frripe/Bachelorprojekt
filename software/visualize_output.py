@@ -39,6 +39,10 @@ y1=[]
 with open(path + 'out_blurry.txt', 'r') as file:
     y1 = file.read()
     y1 = [float(i) for i in y1.split()]
+with open(path + 'out_synth_blurry.txt', 'r') as file:
+    f = file.read()
+    f = [float(i) for i in f.split()]
+y1 = y1 + f
 x1 = list(range(len(y1)))
 #m1 = np.mean(y1)
 #y3 = [m1]*47
@@ -113,29 +117,14 @@ def plot_density():
 #    plt.show()
 #    plt.savefig(path + 'output_density.png')
 #
-def init_binary():
-    tb, fb, ts, fs = 0,0,0,0 # blur is negative, sharp is positive
-    y_true = np.array([0]*len(y1) + [1]*len(y2))
-    y_score = np.concatenate([y1, y2])
-    for i in y1: # blur
-        if i <= threshold:
-            tb+=1
-        else:
-            fs+=1
-    for i in y2: # sharp
-        if i <= threshold:
-            fb+=1
-        else:
-            ts+=1
-    return tb, fb, ts, fs, y_true, y_score
 
-def plot_conf(tb, fb, ts, fs):
+def plot_conf(tb, fb, ts, fs, threshold):
     conf_matrix = np.array([[ts, fb], [fs, tb]])
     disp = metrics.ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=['sharp', 'blur'])
     plt.title(title)
     plt.legend()
     disp.plot()
-    plt.savefig(path + 'output_conf_mat.png')
+    plt.savefig(path + str(threshold) + '_output_conf_mat.png')
 
 def plot_roc(y_true, y_score):
     fpr, tpr, threshold = metrics.roc_curve(y_true, y_score)
@@ -148,15 +137,41 @@ def plot_roc(y_true, y_score):
     plt.title(title)
     plt.legend(loc="lower right")
     plt.savefig(path + 'output_roc.png')
+    return fpr, tpr, threshold
 
-def print_acc_f1(y_true, y_score):
+def print_acc_f1(y_true, y_score, threshold):
     a = np.where(y_score > threshold, 1, 0)
     print("\n" + title)
     print("ACC = " + str(metrics.accuracy_score(y_true, a))) # https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score
     print("F1-score = " + str(metrics.f1_score(y_true, a))) # https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score
 
-tb, fb, ts, fs, y_true, y_score = init_binary()
-plot_conf(tb, fb, ts, fs)
-plot_roc(y_true, y_score)
+def init_y():
+    y_true = np.array([0]*len(y1) + [1]*len(y2))
+    y_score = np.concatenate([y1, y2])
+    return y_true, y_score
+
+def init_binary(threshold):
+    tb, fb, ts, fs = 0,0,0,0 # blur is negative, sharp is positive
+    for i in y1: # blur
+        if i <= threshold:
+            tb+=1
+        else:
+            fs+=1
+    for i in y2: # sharp
+        if i <= threshold:
+            fb+=1
+        else:
+            ts+=1
+    return tb, fb, ts, fs
+
 plot_density()
-print_acc_f1(y_true, y_score)
+y_true, y_score = init_y()
+fpr, tpr, threshold = plot_roc(y_true, y_score)
+
+for t in threshold:
+    plt.clf()
+    print("threshold: " + str(t))
+    tb, fb, ts, fs = init_binary(t)
+    plot_conf(tb, fb, ts, fs, t)
+    print_acc_f1(y_true, y_score, t)
+
