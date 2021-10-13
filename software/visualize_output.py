@@ -17,22 +17,31 @@ avg_time = str(round(sum(times)/len(times), 4))
 
 if(path == "laplacian_variance/output/"):
     title = "Laplacian Variance metric"
-    threshold = 0.861
+#    threshold = 0.861
 elif(path == "FM/output/"):
     title = "Frequency Domain metric"
-    threshold = 0.235
+#    threshold = 0.235
 elif(path == "Histogram-Frequency-based/output/"):
     title = "Histogram Frequency-based metric"
-    threshold = 0.454
+#    threshold = 0.454
 elif(path == "cpbd/output/"):
     title = "CPBD metric"
-    threshold = 0.375
+#    threshold = 0.375
 elif(path == 'merge_metrics/cpbd_lv/'):
     title = 'Merge of CPBD and Laplacian Variance'
-    threshold = 0.5
+#    threshold = 0.5
+elif(path == 'merge_metrics/cpbd_HF/'):
+    title = 'Merge of CPBD and Histogram Frequency-based'
+#    threshold = 0.5
+elif(path == 'merge_metrics/HF_lv/'):
+    title = 'Merge of Histogram Frequency-based and Laplacian Variance'
+#    threshold = 0.5
+elif(path == 'merge_metrics/cpbd_HF_lv/'):
+    title = 'Merge of CPBD, HF and Laplacian Variance'
+#    threshold = 0.5
 else:
     title = "Merge"
-    threshold = 0.5
+#    threshold = 0.5
 
 
 y1=[]
@@ -118,13 +127,16 @@ def plot_density():
 #    plt.savefig(path + 'output_density.png')
 #
 
-def plot_conf(tb, fb, ts, fs, threshold):
-    conf_matrix = np.array([[ts, fb], [fs, tb]])
-    disp = metrics.ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=['sharp', 'blur'])
-    plt.title(title)
-    plt.legend()
+def plot_conf(y_true, y_pred, threshold):
+    conf_matrix = metrics.confusion_matrix(y_true, y_pred)#np.array([[ts, fb], [fs, tb]])
+#    tn, fp, fn, tp = conf_matrix.ravel()
+    disp = metrics.ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=['blur', 'sharp'])
+#    plt.title(title)
+#    plt.legend()
     disp.plot()
-    plt.savefig(path + str(threshold) + '_output_conf_mat.png')
+#    plt.show()
+    plt.savefig(path + str(round(threshold, 3)) + '_output_conf_mat.png')
+    return conf_matrix.ravel()
 
 def plot_roc(y_true, y_score):
     fpr, tpr, threshold = metrics.roc_curve(y_true, y_score)
@@ -139,39 +151,61 @@ def plot_roc(y_true, y_score):
     plt.savefig(path + 'output_roc.png')
     return fpr, tpr, threshold
 
-def print_acc_f1(y_true, y_score, threshold):
-    a = np.where(y_score > threshold, 1, 0)
-    print("\n" + title)
-    print("ACC = " + str(metrics.accuracy_score(y_true, a))) # https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score
-    print("F1-score = " + str(metrics.f1_score(y_true, a))) # https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score
+def print_acc_f1(y_true, y_score, y_pred): #, threshold):
+#    a = np.where(y_score > threshold, 1, 0)
+    print("ACC: " + str(metrics.accuracy_score(y_true, y_pred))) # https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score
+    print("F1-score: " + str(metrics.f1_score(y_true, y_pred))) # https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html#sklearn.metrics.f1_score
 
 def init_y():
-    y_true = np.array([0]*len(y1) + [1]*len(y2))
+    y_true = np.array([0]*len(y1) + [1]*len(y2)) # blur is negative, sharp is positive
     y_score = np.concatenate([y1, y2])
     return y_true, y_score
 
-def init_binary(threshold):
-    tb, fb, ts, fs = 0,0,0,0 # blur is negative, sharp is positive
-    for i in y1: # blur
-        if i <= threshold:
-            tb+=1
-        else:
-            fs+=1
-    for i in y2: # sharp
-        if i <= threshold:
-            fb+=1
-        else:
-            ts+=1
-    return tb, fb, ts, fs
+#def init_binary(threshold):
+#    tp, fp, tn, fn = 0,0,0,0 # blur is negative, sharp is positive
+#    for i in y1: # blur
+#        if i < threshold:
+#            tn+=1
+#        else:
+#            fp+=1
+#    for i in y2: # sharp
+#        if i < threshold:
+#            fn+=1
+#        else:
+#            tp+=1
+#    return tp, fp, tn, fn
 
 plot_density()
 y_true, y_score = init_y()
 fpr, tpr, threshold = plot_roc(y_true, y_score)
+#fpr, tpr, threshold = metrics.roc_curve(y_true, y_score)
+#y_pred = list(map(lambda s: 0 if s < threshold[3] else 1, y1 + y2))
+#print("y_true: " + str(y_true) + "\ny_score: " + str(y_score) + "\ny_pred: " + str(y_pred))
+#print("confusion_matrix(y_true, y_pred): " + str(metrics.confusion_matrix(y_true, y_pred)))
+#
+#tp, fp, tn, fn = init_binary(threshold[10])
+#print("threshold: " + str(threshold[3]) + str(threshold))
 
-for t in threshold:
-    plt.clf()
-    print("threshold: " + str(t))
-    tb, fb, ts, fs = init_binary(t)
-    plot_conf(tb, fb, ts, fs, t)
-    print_acc_f1(y_true, y_score, t)
+#print('tp ' + str(tp) + ' fp ' + str(fp) + ' tn ' + str(tn) + ' fn ' + str(fn))
+#print('tpr ' + str(tpr) + '\nfpr ' + str(fpr))
+#print('tpr2 ' + str(tp/(tp+fn)) + ' fpr2 ' + str(fp/(fp+tn)))
+#plot_conf(tp, fp, tn, fn, threshold[3])
+#tp, fp, tn, fn = init_binary(threshold[3])
+#print('tp ' + str(tp) + ' fp ' + str(fp) + ' tn ' + str(tn) + ' fn ' + str(fn))
+#print('tpr2 ' + str(tp/(tp+fn)) + ' fpr2 ' + str(fp/(fp+tn)))
+
+print("\n" + title)
+for false_pos_rate, true_pos_rate, t in zip(fpr, tpr, threshold):
+    plt.close('all')
+#tn, fp, fn, tp = metrics.confusion_matrix(y_true, y_pred).ravel()
+
+#    tp, fp, tn, fn = init_binary(t)
+    y_pred = list(map(lambda s: 0 if s < t else 1, y1 + y2))
+    tn, fp, fn, tp = plot_conf(y_true, y_pred, t)
+    print("\n...... threshold: " + str(round(t, 3)))
+    print("TPR, sensitivity: " + str(round(true_pos_rate, 3)))
+    print("FPR             : " + str(round(false_pos_rate, 3)))
+    print("TNR, specificity: " + str(round(tn/(tn+fp), 3)))
+    print("PPV, precision  : " + str(round(tp/(tp+fp), 3)))
+    print_acc_f1(y_true, y_score, y_pred)#, t)
 
