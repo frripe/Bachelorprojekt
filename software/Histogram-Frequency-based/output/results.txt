@@ -1,4 +1,3 @@
-
 Histogram Frequency-based metric
 
 ...... threshold: 1.465
@@ -6,141 +5,141 @@ TPR, sensitivity: 0.0
 FPR             : 0.0
 TNR, specificity: 1.0
 PPV, precision  : nan
-ACC: 0.5820379965457686
-F1-score: 0.0
+ACC             : 0.582
+F1-score        : 0.0
 
 ...... threshold: 0.465
 TPR, sensitivity: 0.008
 FPR             : 0.0
 TNR, specificity: 1.0
 PPV, precision  : 1.0
-ACC: 0.5854922279792746
-F1-score: 0.01639344262295082
+ACC             : 0.585
+F1-score        : 0.016
 
 ...... threshold: 0.459
 TPR, sensitivity: 0.017
 FPR             : 0.0
 TNR, specificity: 1.0
 PPV, precision  : 1.0
-ACC: 0.5889464594127807
-F1-score: 0.032520325203252036
+ACC             : 0.589
+F1-score        : 0.033
 
 ...... threshold: 0.343
 TPR, sensitivity: 0.017
 FPR             : 0.003
 TNR, specificity: 0.997
 PPV, precision  : 0.8
-ACC: 0.5872193436960277
-F1-score: 0.03238866396761134
+ACC             : 0.587
+F1-score        : 0.032
 
 ...... threshold: 0.326
 TPR, sensitivity: 0.029
 FPR             : 0.018
 TNR, specificity: 0.982
 PPV, precision  : 0.538
-ACC: 0.5837651122625216
-F1-score: 0.054901960784313725
+ACC             : 0.584
+F1-score        : 0.055
 
 ...... threshold: 0.32
 TPR, sensitivity: 0.033
 FPR             : 0.018
 TNR, specificity: 0.982
 PPV, precision  : 0.571
-ACC: 0.5854922279792746
-F1-score: 0.0625
+ACC             : 0.585
+F1-score        : 0.062
 
 ...... threshold: 0.302
 TPR, sensitivity: 0.124
 FPR             : 0.042
 TNR, specificity: 0.958
 PPV, precision  : 0.682
-ACC: 0.6096718480138169
-F1-score: 0.2097902097902098
+ACC             : 0.61
+F1-score        : 0.21
 
 ...... threshold: 0.294
 TPR, sensitivity: 0.165
 FPR             : 0.05
 TNR, specificity: 0.95
 PPV, precision  : 0.702
-ACC: 0.6217616580310881
-F1-score: 0.26755852842809363
+ACC             : 0.622
+F1-score        : 0.268
 
 ...... threshold: 0.288
 TPR, sensitivity: 0.227
 FPR             : 0.092
 TNR, specificity: 0.908
 PPV, precision  : 0.64
-ACC: 0.6234887737478411
-F1-score: 0.3353658536585366
+ACC             : 0.623
+F1-score        : 0.335
 
 ...... threshold: 0.279
 TPR, sensitivity: 0.558
 FPR             : 0.142
 TNR, specificity: 0.858
 PPV, precision  : 0.738
-ACC: 0.7322970639032815
-F1-score: 0.6352941176470588
+ACC             : 0.732
+F1-score        : 0.635
 
 ...... threshold: 0.276
 TPR, sensitivity: 0.682
 FPR             : 0.169
 TNR, specificity: 0.831
 PPV, precision  : 0.743
-ACC: 0.768566493955095
-F1-score: 0.711206896551724
+ACC             : 0.769
+F1-score        : 0.711
 
 ...... threshold: 0.267
 TPR, sensitivity: 0.682
 FPR             : 0.172
 TNR, specificity: 0.828
 PPV, precision  : 0.74
-ACC: 0.7668393782383419
-F1-score: 0.7096774193548387
+ACC             : 0.767
+F1-score        : 0.71
 
 ...... threshold: 0.265
 TPR, sensitivity: 0.69
 FPR             : 0.172
 TNR, specificity: 0.828
 PPV, precision  : 0.742
-ACC: 0.770293609671848
-F1-score: 0.7152034261241971
+ACC             : 0.77
+F1-score        : 0.715
 
 ...... threshold: 0.259
 TPR, sensitivity: 0.707
 FPR             : 0.181
 TNR, specificity: 0.819
 PPV, precision  : 0.737
-ACC: 0.772020725388601
-F1-score: 0.7215189873417721
+ACC             : 0.772
+F1-score        : 0.722
 
 ...... threshold: 0.256
 TPR, sensitivity: 0.975
 FPR             : 0.567
 TNR, specificity: 0.433
 PPV, precision  : 0.553
-ACC: 0.6597582037996546
-F1-score: 0.7055306427503736
+ACC             : 0.66
+F1-score        : 0.706
 
 ...... threshold: 0.25
 TPR, sensitivity: 1.0
 FPR             : 0.822
 TNR, specificity: 0.178
 PPV, precision  : 0.466
-ACC: 0.5215889464594128
-F1-score: 0.6360052562417872
+ACC             : 0.522
+F1-score        : 0.636
 
 ...... threshold: 0.227
 TPR, sensitivity: 1.0
 FPR             : 0.905
 TNR, specificity: 0.095
 PPV, precision  : 0.442
-ACC: 0.47322970639032813
-F1-score: 0.6134347275031685
+ACC             : 0.473
+F1-score        : 0.613
 
 ...... threshold: 0.209
 TPR, sensitivity: 1.0
 FPR             : 1.0
 TNR, specificity: 0.0
 PPV, precision  : 0.418
-ACC: 0.41796200345423146
-F1-score: 0.5895249695493301
+ACC             : 0.418
+F1-score        : 0.59

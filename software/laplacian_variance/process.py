@@ -1,5 +1,5 @@
-# python3 laplacian_variance/process.py -i ../dataset/jpg/NoProblems/ > laplacian_variance/output/out_NoProblems.txt
-# python3 laplacian_variance/process.py -i ../dataset/jpg/Blurry/ > laplacian_variance/output/out_Blurry.txt
+# python3 laplacian_variance/process.py -d -i ../dataset/training/png/NoProblems/
+# python3 laplacian_variance/process.py -i ../dataset/training/png/Blurry/ > laplacian_variance/output/out_Blurry.txt
 
 
 import sys
@@ -66,7 +66,7 @@ if __name__ == '__main__':
         save_path = None
 
     results = []
-    
+
     file_object = open('laplacian_variance/output/time.txt', 'a') # added
 
     for image_path in find_images(args.images):
@@ -91,9 +91,9 @@ if __name__ == '__main__':
         time_end = time.time() # added
         file_object.write(str(time_end - time_start) + "\n") # added # measured in seconds
 
-        if args.display:
-            cv2.imshow('input', image)
-            im = cv2.resize(pretty_blur_map(blur_map), (960, 540)) 
+        if args.display and score > 1:
+            cv2.imshow('input', cv2.resize(image, (540, 540)))
+            im = cv2.resize(pretty_blur_map(blur_map), (540, 540))
             cv2.imshow('result', im)
 
             while(1):
@@ -102,7 +102,7 @@ if __name__ == '__main__':
                     break
 #            if cv2.waitKey(0) == ord('q'):
 #                logging.info('exiting...')
-            exit()
+#            exit()
 
     if save_path is not None:
         logging.info(f'saving json to {save_path}')
