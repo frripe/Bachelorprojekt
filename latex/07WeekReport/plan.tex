@@ -1,0 +1,24 @@
+\subsection*{Overall Project Plan}
+\hspace{-4.3cm}
+\begin{gantt}{14}{12}
+    \begin{ganttitle}
+        \titleelement{September}{5}
+        \titleelement{October}{4}
+        \titleelement{November}{3}
+    \end{ganttitle}
+    \begin{ganttitle}
+        \numtitle{1}{1}{12}{1}
+    \end{ganttitle}
+    \ganttbar{\textbf{Activity $|$ (Risk)}}{0}{0}
+    \ganttbar[pattern=crosshatch, color=green]{Write introduction and project plan $|$ (1)}{0}{2}
+    \ganttbar[pattern=crosshatch, color=green]{Select sharpness-metrics to include $|$ (2)}{2}{2}
+    \ganttbarcon[pattern=crosshatch, color=orange]{Find and run code, test it + write $|$ (3)}{3}{4}
+    \ganttmilestone[color=red]{Hand in project plan}{4.5}
+    \ganttbar{Implement and test program with GUI + write $|$ (2)}{6}{3}
+    \ganttbar{Research on active contours + write $|$ (2)}{8}{1}
+    \ganttbarcon{Implement and test active contours + write $|$ (3)}{9}{1}
+    \ganttbar{Research to find a solution to earwax + write $|$ (2)}{10}{1}
+    \ganttbarcon{Implement and test earwax-solution + write $|$ (3)}{11}{1}
+    \ganttbar{Read through + small corrections $|$ (1)}{10}{2}
+    \ganttmilestone[color=red]{Hand in project}{12}
+\end{gantt}

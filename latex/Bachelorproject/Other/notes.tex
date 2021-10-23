@@ -1,0 +1,138 @@
+\section*{Møde 7}
+\subsection*{Spørgsmål}
+\begin{itemize}
+    \item \textit{Find betragtninger over køretider!} betragtninger?
+\end{itemize}
+
+\subsection*{Noter}
+png i stedet for jpeg i lv
+lav boxplot
+tune alpha-værdig (normaliser) med merge metrics for at se hvornår den scorer bedst (vægtning)
+
+\section*{Møde 5}
+Skriv til Josefine: møde med Interacoustics. Video af otoskop, så min model kan sige til, når billedet er godt.\\
+Lav plot af hvordan metricken performer på forskelligt gausiske blurrede billeder
+Større gaus-matrix
+
+\section*{Møde 4}
+\subsection*{Spørgsmål}
+\begin{itemize}
+    \item Tips til at finde implementationer? Har ikke haft held med det...
+    \item Træningsdatasæt: syntetiske billeder? (skal vist ikke teste korrelation). Er det så bedre med syntetiske billeder også?
+    \item Josefine mener, at jeg ikke behøver komme igennem alle tre kvalitetsproblemer. Er det vigtigst, at jeg får gennemarbejdet billedanalysedelen, eller at jeg også får lavet et program?
+    \item Ser min plan urealistisk ud? Den skal afleveres omlidt - er det bare en formalitet?
+\end{itemize}
+\subsection*{Noter}
+Få den fundne kode til at køre\\
+confusion matrix. beregn relevante scores\\
+ikke overtræne på data - lav syntetisk datasæt\\
+Det er nok at have et gennemarbejdet bachelorprojekt kun om blur...\\
+
+
+\section*{Møde med Josefine 1}
+\subsection*{Spørgsmål}
+\begin{itemize}
+    \item Er parametrene i tabellen relevante i forbindelse med at udvælge relevante algoritmer til blur-detection?
+    \item Hvilke algoritmer skal testes? F.eks. vil jeg gerne teste de to med træningsdata, da jeg går ud fra, at de fleste billeder vil være relativt ens.
+    \item Hvilke metoder til test ville være bedst? F.eks. area under the roc curve, korrelation, accuracy
+    \item Hvordan skal test-datasættet laves? Forskellige metoder bl.a. gaussian. Skal de være gradvist mere uskarpe, eller skal der være en tydelig grænse?
+\end{itemize}
+\subsection*{Noter}
+simple variance, 
+prøv laplace/derivative-based + frequency domain (klassiske)\\
+Skal de kombineres?\\
+sensitivity/ specificity - specificer accuracy overall (F1-score)\\
+python library til test: sklearn, metrics
+
+
+\section*{Møde 3}
+\subsection*{Spørgsmål}
+\begin{itemize}
+    \item Møde i uge 42?
+    \item Skal jeg tilføje en række i tabellen over, om paperet siger, at algoritmen er hurtig?
+\end{itemize}
+\subsection*{Noter}
+Lav forklaring af søjler i tabellen\\
+møde med josefine - hvad synes \\
+area under the roc curve\\
+korrelation\\
+skriv til rasmus om accuracy mål (kapitel i bog) - hvis josefine siger god\\
+hvordan laves test dataset\\
+
+\section*{Møde 2}
+Tabel over alle forskellige algoritmer\\
+Hvilke er gode til hvad? Beslut, hvilke der skal bruges på baggrund af det.\\
+Skab kunstigt dataset. Afprøv matlab-implementationen af JNB.\\
+Skriv lidt mere (ja resume) til hver artikel. Bliver integreret som et underafsnit i introduktion. Referer til artiklerne herfra senere.\\
+
+(feedback til lars: skriv gerne en "todo" af hvordan man får noget op at køre. Til appendix)
+
+\section*{Møde 1}
+openCV, pillow, scipy\\
+undersøg flere blur-algoritmer. Hvilken virker bedst?\\
+Ugerapport i bachelor-afhandlingssprog
+template på ugerapport på hjemmeside\\
+    1. projektplan\\
+    2. risikoanalyse (for at blive forsinket i processen) - hvad er plan B?\\
+    3. Skriv egen forståelse - vis problemerne (billeder), undersøg algoritmerne (tid, præcision) (lav et framework)\\
+    Introduktion\\
+    
+    Indsæt læste artikler i "previous work"\\
+    Screendump af interessante billeder til ugerapport\\
+    Hvor langt er vi kommet i forhold til planen?\\
+    
+    Diskussion/resultater - hvordan kan resultaterne bruges?\\
+    
+    
+
+
+
+\newpage
+\section*{Informationer om projekt af typen Bachelorprojekt:}
+Dansk titel:                    Evaluering af kvaliteten af otoskopibilleder med billedanalyse\\
+Engelsk titel:                  Image-based quality evaluation of otoscopy images\\
+Forklaring/indhold(DK):         læringsmål:
+\begin{itemize}
+    \item Beskrive hvordan otoskopibilleder bliver taget
+    \item Beskrive typiske problemer med kvaliteten af otoskopibilleder optaget i et klinisk miljø
+    \item Vælge eksempler på billeder hvor der er typiske kvalitetsproblemer
+    \item Implementere, teste og evaluere billedanalysealgoritmer, der kan detektere og kvantificere typiske kvalitetsproblemer i otoskopibilleder
+\end{itemize}
+
+% Forklaring/indhold(UK):         Learning objectives:\\
+% * Describe how otoscopy images are acquired\\
+% * Describe the typical quality problems with otoscopy images acquired in a clinical setting\\
+% * Select example images where typical quality issues are present\\
+% * Implement, test and evaluate image analysis algorithm that can detect and quantify typical quality issues with otoscopy images\\
+
+\section*{Evaluering af otoskopibillede-kvalitet}
+
+Målet med projektet er at lave et værktøj, der kan afgøre, om billedkvaliteten af et otoskopibillede af trommehinden er god nok til at anvende billedet til at stille en diagnose. I første omgang er målet af identificere følgende problemer:
+\begin{itemize}
+    \item Uskarpt\\
+§ De, K., \& Masilamani, V. (2013). Image sharpness measure for blurred images in frequency domain. Procedia Engineering, 64, 149-158\\
+§ Ferzli, R., \& Karam, L. J. (2009). A no-reference objective image sharpness metric based on the notion of just noticeable blur (JNB). IEEE transactions on image processing, 18(4), 717-728.\\
+§ Ferzli et al. har en grundig gennemgang af tretten forskellige metoder til skarphedsvurdering med referencer
+\item Ørevoks\\
+Kig på farverne i billedet, da ørevoks er gulligt. Fravælg f.eks. billeder med for meget gult i billedet
+\item Membranen er ikke synlig på billedet\\
+Active contours eller anden simpel segmenterings algoritme til at segmentere membranen. Hvis ikke membranen kan findes i billedet, eller hvis segmenteringen viser at membranen er meget lille i billedet kan man konkludere at billedet ikke er godt nok
+\end{itemize}
+Afslutning af projektet: at lave det til et lille program med en GUI. Her vil man kunne uploade sit billede nemt med en load-knap, og så få feedback på billedet. Feedback kunne være en besked om hvilket problem programmet har detekteret – måske også i hvilken grad, og så en besked om at lægen skal tage et nyt billede uden disse problemer.
+
+Josefine har forberedt en database med billeder med de forskellige problemer med 47 uskarpe billeder, 51 billeder med ørevoks, 21 billeder hvor membranen ikke er synlig på billedet, samt 34 billeder som lever op til den forventede kvalitet uden disse problemer.
+
+\subsection*{Læringsmål}
+\begin{itemize}
+    \item Describe how image data is represented in a computer system
+    \item Analyze, test and evaluate the running time of the used image processing algorithms
+    \item Apply and analyze the graph algorithms that are used in active contours algorithm
+    \item Establish a requirement specification for a software interface to the developed image analysis algorithms
+    \item Design, implement and evaluate a user interface that can be used for quality evaluation of otoscopic images
+    \item Plan and execute a test based on the requirement specification and report the result
+\end{itemize}
+
+Requirement og test kan være fokuseret på hvad en typisk bruger kunne ønske sig at af en brugerflade.\\
+"test" - måling af køretider via en form for timer.\\
+"Analyze" - er om algoritmen er $O^2$, O(N log(N)) osv.\\
+"evaluate" - mere højniveau evaluering om fordele og ulemper ved algoritmevalg i forhold til køretid og brugsscenarie. F.eks.: er det ok (givet requirement) at en læge skal vente 10 minutter på et bedre svar end med en knap så præcis algoritme, som kan give et svar på 5 sekunder?

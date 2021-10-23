@@ -54,6 +54,21 @@ scores2 = open_scores(path2, 'out_synth_no_problems.txt')
 scores  = comp_scores(scores1, scores2)
 write_to_file(scores, path3, 'out_synth_no_problems.txt')
 
+scores1 = open_scores(path1, 'out_synth_blurry_gaussian_2.0.txt')
+scores2 = open_scores(path2, 'out_synth_blurry_gaussian_2.0.txt')
+scores  = comp_scores(scores1, scores2)
+write_to_file(scores, path3, 'out_synth_blurry_gaussian_2.0.txt')
+
+scores1 = open_scores(path1, 'out_synth_blurry_gaussian_3.0.txt')
+scores2 = open_scores(path2, 'out_synth_blurry_gaussian_3.0.txt')
+scores  = comp_scores(scores1, scores2)
+write_to_file(scores, path3, 'out_synth_blurry_gaussian_3.0.txt')
+
+scores1 = open_scores(path1, 'out_synth_blurry_gaussian_4.0.txt')
+scores2 = open_scores(path2, 'out_synth_blurry_gaussian_4.0.txt')
+scores  = comp_scores(scores1, scores2)
+write_to_file(scores, path3, 'out_synth_blurry_gaussian_4.0.txt')
+
 times1 = open_scores(path1, 'time.txt')
 times2 = open_scores(path2, 'time.txt')
 times  = comp_times(times1, times2)

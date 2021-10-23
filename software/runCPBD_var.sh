@@ -25,11 +25,11 @@ for a in 0.002 0.01 0.02 0.1 0.2 0.4; do
         python3 cpbd/run_cpbd.py "../dataset/training/bmp/synth_no_problems/" ${a} ${c} > cpbd/output/out_synth_no_problems.txt
 
         echo $a
-        python3 cpbd/run_cpbd.py "../dataset/training/bmp/synth_blurry_2.0/" ${a} ${c} >> cpbd/output/synth_blurry.txt
+        python3 cpbd/run_cpbd.py "../dataset/training/bmp/synth_blurry_2.0/" ${a} ${c} > cpbd/output/synth_blurry.txt
         echo $a
-        python3 cpbd/run_cpbd.py "../dataset/training/bmp/synth_blurry_3.0/" ${a} ${c} >> cpbd/output/synth_blurry.txt
+        python3 cpbd/run_cpbd.py "../dataset/training/bmp/synth_blurry_3.0/" ${a} ${c} > cpbd/output/synth_blurry.txt
         echo $a
-        python3 cpbd/run_cpbd.py "../dataset/training/bmp/synth_blurry_4.0/" ${a} ${c} >> cpbd/output/synth_blurry.txt
+        python3 cpbd/run_cpbd.py "../dataset/training/bmp/synth_blurry_4.0/" ${a} ${c} > cpbd/output/synth_blurry.txt
 
 
         echo $a
@@ -38,5 +38,3 @@ for a in 0.002 0.01 0.02 0.1 0.2 0.4; do
         echo $n
     done
 done
-
-

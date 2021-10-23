@@ -23,13 +23,10 @@ do
     python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_blurry/" > FM/output/out_synth_blurry.txt
     python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_no_problems/" > FM/output/out_synth_no_problems.txt
 
-    python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_blurry_2.0/" >> FM/output/out_synth_blurry.txt
-    python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_blurry_3.0/" >> FM/output/out_synth_blurry.txt
-    python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_blurry_4.0/" >> FM/output/out_synth_blurry.txt
+    python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_blurry_2.0/" > FM/output/out_synth_blurry.txt
+    python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_blurry_3.0/" > FM/output/out_synth_blurry.txt
+    python3 FM/kanjar.py ${a} <<< "../dataset/training/png/synth_blurry_4.0/" > FM/output/out_synth_blurry.txt
 
     python3 visualize_density_plot.py FM/output/ ${a}
-    
+
 done
-
-
-

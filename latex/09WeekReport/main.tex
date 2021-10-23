@@ -1,0 +1,62 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{gantt}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{references.bib}
+
+
+\title{{Bachelor's project\\[0.5em]}
+       {\bf \huge Image-based quality evaluation of otoscopy images\\[0.5em]}
+       {\bf Weekly Report 9}}
+\author{Freja Rindel Peulicke, s185393}
+\date{\today}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{\medskipamount}
+
+\begin{document}
+\maketitle
+
+\section*{Literature}
+%\textit{\textbf{Hint:}Try to write this section so it can be used directly in your Previous Work chapter in your thesis.}
+
+\input{What has been done this week}
+
+
+\newpage
+\section*{Project status according to the study plan}
+
+\input{plan}
+
+
+\section*{Plan for the next weeks}
+
+\begin{enumerate}
+\item Decide parameters to choose metric on (e.g. let user decide FNR and then minimize/maximize some parameter and choose the metric, that performs best on those criteria)
+\item Implement choosing metric
+\item Test the metrics on a test data set (the images not used for training) and report results
+\item Start designing and implementing the final program
+\end{enumerate}
+
+
+
+\section*{References}
+\printbibliography[type=online,title={Code downloads}]
+\printbibliography[type=book,title={Books}]
+\printbibliography[type=article,title={Articles}]
+
+
+\end{document}

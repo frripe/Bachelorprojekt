@@ -67,7 +67,12 @@ if __name__ == '__main__':
 
     results = []
 
-    file_object = open('laplacian_variance/output/time.txt', 'a') # added
+    if 'png' in args.images[0]:
+        file_object = open('laplacian_variance/output/png/time.txt', 'a') # added
+    elif 'jpg' in args.images[0]:
+        file_object = open('laplacian_variance/output/jpg/time.txt', 'a') # added
+    else:
+        file_object = open('laplacian_variance/output/time.txt', 'a') # added
 
     for image_path in find_images(args.images):
         image = cv2.imread(str(image_path))
@@ -91,7 +96,7 @@ if __name__ == '__main__':
         time_end = time.time() # added
         file_object.write(str(time_end - time_start) + "\n") # added # measured in seconds
 
-        if args.display and score > 1:
+        if args.display:
             cv2.imshow('input', cv2.resize(image, (540, 540)))
             im = cv2.resize(pretty_blur_map(blur_map), (540, 540))
             cv2.imshow('result', im)

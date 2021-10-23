@@ -1,0 +1,72 @@
+\subsection{Previous Work}
+\subsubsection{Articles on no-reference sharpness-metrics}
+13 different no-reference algorithms for detecting image sharpness are outperformed by another algorithm using probability summation and JNB (just noticable blur) introduced in \cite{JNB}. The algorithms are tested on two types of test-datasets: One containing the same image with different blur-values. Another with images of different content and blur-values. Results of the tests are, that the 13 algorithms do not perform very well for images with different content. The algorithms are tested and compared to one another by using the results of experiments made on humans detecting blurriness on the same images.\\
+The JNB-metric works by scanning the image with an edge detector, Sobel in this case. Afterwards the no. edge pixels, $N$, are calculated for each 64*64 block of the image, excluding smooth blocks - having $N<\texttt{threshold}$ - from further evaluation, as it is assessed that there must be some edges to measure blurriness on. On each block the contrast, edge widths and probabilities of blur distortion are calculated, and the overall distortion is calculated. The sharpness measure is the inverse distortion normalized over all the blocks.\\
+
+A metric, Frequency Domain Image Blur Measure, with the purpose of quantifying the quality of blurred images is presented in\cite{FM}. It is shown that this algorithm in certain cases outperforms the JNB metric\cite{JNB}\footnote{Just noticeable blur} and the CPBD\cite{CPBD}\footnote{Cumulative probability of blur detection} metric, that are presented as some of the best image sharpness metrics so far. The metric works by transforming the image into frequency domain, as it is observed that \textit{when the blur in an image increases the number of high frequency component in the images decreases}\cite{FM}. An experimentally estimated threshold is used to calculate the number of high frequency components in the image, and this is then used to calculate the final score.
+The time complexity of FM is calculated to be $O(nlogn)$, where  $n = \texttt{no.pixels\_in\_image}$, as the time complexity of the fast Fourier transformation is $O(nlogn)$ and all of the following steps takes $O(n)$ time.\\
+The three metrics were tested on images containing Gaussian blur and motion blur. FM performed well in both tests, JNB performed well on Gaussian blur and CPBD performed well on motion blur. Applying FM on images where blur removal was applied, it agreed well with the blur before and after.\\
+
+\textcolor{red}{A proposed metric for detecting blurriness in a no-reference image, as there is an increasing interest.} The blurriness can emerge when the image is first taken, during processing or compression. There exist other metrics including JNB\cite{JNB} that correlates well with subjective scores on some images, though not images where the blur in foreground and background is very distinct.\\
+The probability of blur detection is calculated on the edges as in JNB\cite{JNB}. Also, the concept of just noticeable blur defined in JNB is the basis of the CPBD metric, and the image is divided into smooth/non-smooth blocks as in JNB. After dividing into blocks the cumulative probability of blur detection is calculated as the probability of blur detection being below the just noticeable blur.\\
+The metric is discretized into five different quality classes. For this, the MOS\footnote{Mean opinion score: human judgement of overall quality of the image.} and CPBD scores of a selected set of images were used. Tests were performed on Gaussian blurred and JPEG2000 compressed images. The CPBD metric performs better than the discrete CPBD metric in all the tests. They both perform better than the JNB metric and marziliano metric, that were tested too.\\
+
+
+\textit{Proposing sharpness metric for images with noise. No need to estimate or remove noise before evaluating sharpness. Using Perceptual blur metric\cite{jnbm03}. Same explanation of 9 of the metrics from \cite{JNB}. "discrete dyadic wavelet transform (DDWT) of the image [...] lowpass filter [...] highpass"}\\
+
+\textit{A method for autofocusing an electron microscope. Using variance over the whole image, the sharpness is measured. The method is considered fast, as previous methods calculated the Fourier transformation, which took long time. The proposed algorithm only calculates variance ...argumentation in article.}\cite{jnbm05}\\
+
+\textit{Thesis on autofocusing on scannings from electron microscope.\cite{jnbm06} Including sections on developing, implementing and testing four different algorithms on detecting sharpness of which two are the autocorrelation-based metric and the derivative-based metric listed in table\ref{tab:blur_metrics}.}\\
+
+Presentation of full- and no-reference blur-metric and a full-reference ringing metric. The blur-metric presented finds vertical edges, then filters noise away using a threshold on the gradient image. The width of the edge is then counted and the average edge-width then determines the sharpness of the image. The metric can be extended to finding all horizontal edges as well.\cite{jnbm07} In the article, the edge detection algorithm is the bottleneck, as they used a lightweight (sobel filter) algorithm. Using a more powerful edge-detection algorithm can improve the precision of the metric, but will reduce the speed.\\
+
+\textit{Autofocus. constructing different images to test on: sinusoidal, random noise and (true) blurred digitized images from a microscope.\cite{jnbm08} analyzed 9 autofocus-methods.}
+
+\textit{Cellular logic measures: Transforming grayscale image into 3d bit-voxel (opacity) images. using highpass-filter with a factor.}
+
+\textit{\texttt{Spectral analysis}: "Sharp edges and fine details correspond to high spatial frequencies, and large
+objects with slowly changing gray levels correspond to
+low spatial frequencies. Therefore, we can expect focused images to exhibit more power at high frequencies
+than at low frequencies."}
+
+\textit{Power measures: "Power can be defined for images", "the AC power component increases as the image sharpens"}
+
+\textit{    Variance: "AC power of an image is directly measured by computing the variance of the picturepoint values", "$F_{var} = E{G^2} - (E{G})^2$"}
+    
+\textit{    Brenner's methods: "as an image comes into focus, differences between a picturepoint and its neighbor two points away increase"}
+
+\textit{Histogram measures: histogram on grayscale-values. "For most in-focus images, the histogram contains occurrences in many bins". Defocus -$>$ decreased no. bins in histogram with different grayscale and vice versa. However, this does not apply to all images.}
+
+\textit{Range: "difference between the maximum gray level and the minimum gray level". Maximum and minimum gray level present in image. It is assumed that the range will increase as the image comes into focus.}
+
+\textit{\textbf{Mendelsohn and Mayall’s histogram method} (Histogram threshold): Wheighed sum of all picture points in histogram bins above a threshold chosen to be near the mean graylevel value. It is computed as the sum of all graylevels multiplied with the current graylevel's amount of occurrences.}
+
+\textit{Mason and Green’s histogram method: Same as above except for the way that the threshold is chosen: "weighed the importance of picturepoints by estimates of the gradient at that point".}
+
+\textit{Histogram measure entropy: " For an in-focus image, the information content is usually higher because the probability of occurrence of each gray level is low", "The entropy function is a measure of information content", "entropy has fundamental problems when used to measure the relative focus of those images that fill few bins when in focus"}
+
+\textit{The two best measures were the the power measures. The worst ones were using the grayscale histogram.}
+
+
+\cite{jnbm09}\\
+\cite{jnbm10}\\
+
+Attempt to formulate a robust autofocusing algorithm.\cite{jnbm11} Comparing eight different sharpness metrics. They are all described shortly and it is explained that they are more or less similar in pairs: amplitude and variance, Tenengrad and Laplacian, fast Fourier transform and sum-modulus-difference, histogram entropy and histogram of local variations. Also some searching algorithms for finding the global maximum of the sharpness function are evaluated. The variance method and the Tenengrad are recommended as sharpness functions in the conclusion.\\
+
+Histogram frequency-based metric for detecting blur in a JPEG or MPEG image.\cite{jnbm12} A method for detecting blur in an image and in videos is proposed and tested. Images in JPEG and MPEG file format are compressed. The compression-calculations of the DCT\footnote{discrete cosine transform} are exploited. \textcolor{red}{"based on histograms of non-zero DCT occurrences"}. To ignore noise, a threshold is set when creating the DCT-histogram. All values below the threshold are set to 0. "The idea of the blur estimation algorithm is then to examine the number of coefficients that are (almost) always zero in the image, i.e. to count the number of zeroes (or nearly zero values) in the histograms". A weighting-grid is applied to make the final quality measure. (Is lightweight\cite{jnbm12}: instead of calculating over the whole image (256*256 pixels) it is calculated on the equally divided 8*8 blocks of the image)\\
+
+\textit{A method for measuring image sharpness based on the wish of developing a method for sharpening the image is proposed in \cite{jnbm13}. "employs localized frequency content analysis in a feature-based context". Fourier transform\cite{jnbm13}. Feature based - require well-defined model e.g. single star in astronomical image. Highpass and bandpass filters are applied in 1D to make the implementation more light-weight, thus unfortunately the diagonal edges appear more blurry than horizontal and vertical edges. Also, it is determined, that small parts of the feature regions are representative for the whole feature. "implement sharpness estimation WFmSh(11), with HP(x)m, and BP(x)m (8) implemented as IIR filters (9), and substituting (7) into (6)"\\}
+
+\textit{"based on the digital image power spectrum of normally acquired arbitrary scenes"\cite{jnbm14}\\}
+
+Detection of gradients in image. Using canny edge detection to find the edges. Calculating width of edge by for all edge pixels calculating in both directions (+ and -) of the gradient the amount of pixels going respectively up or down (following the gradient). The average edge-spread is used in the proposed image quality score together with some parameters, determined by training on a dataset.\cite{jnbm17}\\
+
+
+In 1991 the \textbf{JPEG method} for digital image compression of still continuous-tone images was proposed in a paper \cite{jpg} in hope that a standard compression form would enable better performance in compressing and storing images digitally, as it would be possible to develop hardware for the common standard, and lower the cost of this specialized hardware.\\
+The JPEG coding of the image is based on the DCT, that is applied to $8\times 8$ blocks of the image. The DCT does not provide any compression of the image data. After the application of the DCT, each of the 64 DCT-values are quantized by dividing with a corresponding Q-Table (quantization-table) element. The 64-element Q-Table is given to the encoder as input, and should be designed with great care, as the quantization decreases the amount of information in the image.
+%\textcolor{red}{DC component (no frequency in both dimensions) is treated separately ... advantageous}\\
+In the final compression step, entropy coding, there is no information loss. Based on the statistical characteristics of the image its data is encoded more compactly\footnote{This may be done using Huffman coding or arithmetic coding.}.\\
+The decompression of JPEG images is also described. The article later describes typical applications of JPEG to examine how it can be used, what its potential is and the work it requires to implement its use into society.
+
+
+

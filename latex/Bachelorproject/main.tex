@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,graphicx}
+% \usepackage{biblatex}\addbibresource{Other/references.bib}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{Other/references.bib}
+\usepackage{Other/gantt}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\begin{document}
+\input{Other/titlepage}
+\section*{Abstract}
+\tableofcontents
+\newpage
+
+
+\input{Sections/Introduction}
+\input{Sections/PreviousWork}
+\input{Sections/ImageFoundation}
+\input{Sections/BlurredImages}
+\input{Sections/Implementation}
+\input{Sections/Discussion}
+
+\newpage
+% \printbibliography[heading=bibintoc, title={References}]
+\section{References}
+\printbibliography[type=online,title={Code downloads}]
+\printbibliography[type=book,title={Books}]
+\printbibliography[type=article,title={Articles}]
+\newpage
+
+\input{Other/plan}
+\input{Other/notes}
+
+\end{document}

@@ -4,7 +4,7 @@ Histogram Frequency-based metric
 TPR, sensitivity: 0.0
 FPR             : 0.0
 TNR, specificity: 1.0
-PPV, precision  : nan
+PPV, precision  : 1.0
 ACC             : 0.582
 F1-score        : 0.0
 

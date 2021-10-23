@@ -56,7 +56,7 @@ def run_gaussian(sigma, truncate):
         path = 'original/' + t + '/synth_blurry_' + str(sigma) + '/'
         if not os.path.exists(path):
             os.mkdir(path)
-        n1 = len(os.listdir('original/' + t + '/' + folder + '/'))
+        n1 = min(32, len(os.listdir('original/' + t + '/' + folder + '/')))
         for i in range(1, n1+1):
             filename = 'original/' + t + '/' + folder + '/' + str(i) + '.' + t
             image = skimage.io.imread(fname=filename)
@@ -65,7 +65,7 @@ def run_gaussian(sigma, truncate):
             ) * 255).astype(np.uint8)
             skimage.io.imsave(path + str(i) + '.' + t, blurred, check_contrast=False)
 
-        n2 = len(os.listdir('original/' + t + '/' + synth_folder + '/'))
+        n2 = min(32, len(os.listdir('original/' + t + '/' + synth_folder + '/')))
         for i in range(1, n2+1):
             filename = 'original/' + t + '/' + synth_folder + '/' + str(i) + '.' + t
             image = skimage.io.imread(fname=filename)
