@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.21)  22 OCT 2021 22:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.21)  23 OCT 2021 21:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -964,12 +964,6 @@ LaTeX Warning: Label `fig:hf_roc' multiply defined.
 
 
 LaTeX Warning: Label `sub@fig:hf_roc' multiply defined.
-
-
-LaTeX Warning: Label `fig:LV_dens' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:LV_dens' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -2185,22 +2179,13 @@ File: Figures/BlurredImages/lv/33.png Graphic file (type png)
 Package pdftex.def Info: Figures/BlurredImages/lv/33.png  used on input line 61
 1.
 (pdftex.def)             Requested size: 207.0021pt x 207.00145pt.
-
-
-LaTeX Warning: Reference `fig:LV_very_sharp' on page 32 undefined on input line
- 612.
-
-
-LaTeX Warning: Reference `fig:LV_very_sharp' on page 32 undefined on input line
- 612.
-
-<Figures/BlurredImages/lv/lv_very_sharp.png, id=569, 1152.305pt x 632.3625pt>
+<Figures/BlurredImages/lv/lv_very_sharp.png, id=571, 1152.305pt x 632.3625pt>
 File: Figures/BlurredImages/lv/lv_very_sharp.png Graphic file (type png)
 <use Figures/BlurredImages/lv/lv_very_sharp.png>
 Package pdftex.def Info: Figures/BlurredImages/lv/lv_very_sharp.png  used on in
 put line 616.
 (pdftex.def)             Requested size: 207.0021pt x 113.5984pt.
-<Figures/BlurredImages/lv/lv_normal.png, id=570, 1144.275pt x 626.34pt>
+<Figures/BlurredImages/lv/lv_normal.png, id=572, 1144.275pt x 626.34pt>
 File: Figures/BlurredImages/lv/lv_normal.png Graphic file (type png)
 <use Figures/BlurredImages/lv/lv_normal.png>
 Package pdftex.def Info: Figures/BlurredImages/lv/lv_normal.png  used on input 
@@ -2219,7 +2204,7 @@ Overfull \vbox (2.90005pt too high) has occurred while \output is active []
 
 [33 <./Figures/BlurredImages/lv/33.png (PNG copy)> <./Figures/BlurredImages/lv/
 lv_very_sharp.png> <./Figures/BlurredImages/lv/lv_normal.png>]
-<Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_lv.png, id=585, 46
+<Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_lv.png, id=586, 46
 2.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_lv.png Graphi
 c file (type png)
@@ -2228,7 +2213,7 @@ Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/output_roc
 _cpbd_lv.png  used on input line 641.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
 <Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_lv.png,
- id=586, 462.528pt x 346.896pt>
+ id=587, 462.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_lv
 .png Graphic file (type png)
 <use Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_lv.
@@ -2236,7 +2221,7 @@ png>
 Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/threshold_
 test_scores_cpbd_lv.png  used on input line 646.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
-<Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_lv.png, id=587, 4
+<Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_lv.png, id=588, 4
 62.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_lv.png Graph
 ic file (type png)
@@ -2244,7 +2229,7 @@ ic file (type png)
 Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/output_den
 s_cpbd_lv.png  used on input line 651.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
-<Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_hf.png, id=588, 46
+<Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_hf.png, id=589, 46
 2.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_hf.png Graphi
 c file (type png)
@@ -2253,7 +2238,7 @@ Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/output_roc
 _cpbd_hf.png  used on input line 663.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
 <Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_hf.png,
- id=589, 462.528pt x 346.896pt>
+ id=590, 462.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_hf
 .png Graphic file (type png)
 <use Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_hf.
@@ -2261,7 +2246,7 @@ png>
 Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/threshold_
 test_scores_cpbd_hf.png  used on input line 668.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
-<Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_hf.png, id=590, 4
+<Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_hf.png, id=591, 4
 62.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_hf.png Graph
 ic file (type png)
@@ -2272,7 +2257,7 @@ s_cpbd_hf.png  used on input line 673.
  [34 <./Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_lv.png> <./
 Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_lv.png> 
 <./Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_lv.png>]
-<Figures/BlurredImages/results_on_thresholds/output_roc_hf_lv.png, id=599, 462.
+<Figures/BlurredImages/results_on_thresholds/output_roc_hf_lv.png, id=600, 462.
 528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_roc_hf_lv.png Graphic 
 file (type png)
@@ -2281,7 +2266,7 @@ Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/output_roc
 _hf_lv.png  used on input line 685.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
 <Figures/BlurredImages/results_on_thresholds/threshold_test_scores_hf_lv.png, i
-d=600, 462.528pt x 346.896pt>
+d=601, 462.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/threshold_test_scores_hf_lv.p
 ng Graphic file (type png)
 <use Figures/BlurredImages/results_on_thresholds/threshold_test_scores_hf_lv.pn
@@ -2289,7 +2274,7 @@ g>
 Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/threshold_
 test_scores_hf_lv.png  used on input line 690.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
-<Figures/BlurredImages/results_on_thresholds/output_dens_hf_lv.png, id=601, 462
+<Figures/BlurredImages/results_on_thresholds/output_dens_hf_lv.png, id=602, 462
 .528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_dens_hf_lv.png Graphic
  file (type png)
@@ -2300,7 +2285,7 @@ s_hf_lv.png  used on input line 695.
  [35 <./Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_hf.png> <./
 Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_hf.png> 
 <./Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_hf.png>]
-<Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_hf_lv.png, id=610,
+<Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_hf_lv.png, id=611,
  462.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_roc_cpbd_hf_lv.png Gra
 phic file (type png)
@@ -2309,7 +2294,7 @@ Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/output_roc
 _cpbd_hf_lv.png  used on input line 707.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
 <Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_hf_lv.p
-ng, id=611, 462.528pt x 346.896pt>
+ng, id=612, 462.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_hf
 _lv.png Graphic file (type png)
 <use Figures/BlurredImages/results_on_thresholds/threshold_test_scores_cpbd_hf_
@@ -2317,7 +2302,7 @@ lv.png>
 Package pdftex.def Info: Figures/BlurredImages/results_on_thresholds/threshold_
 test_scores_cpbd_hf_lv.png  used on input line 712.
 (pdftex.def)             Requested size: 165.59853pt x 124.19963pt.
-<Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_hf_lv.png, id=612
+<Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_hf_lv.png, id=613
 , 462.528pt x 346.896pt>
 File: Figures/BlurredImages/results_on_thresholds/output_dens_cpbd_hf_lv.png Gr
 aphic file (type png)
@@ -2446,41 +2431,40 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28893 strings out of 481239
- 592269 string characters out of 5920376
- 1233422 words of memory out of 5000000
- 43443 multiletter control sequences out of 15000+600000
- 543620 words of font info for 65 fonts, out of 8000000 for 9000
+ 28891 strings out of 481239
+ 592250 string characters out of 5920376
+ 1233490 words of memory out of 5000000
+ 43442 multiletter control sequences out of 15000+600000
+ 543312 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,13n,96p,1011b,1344s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (46 pages, 6357221 bytes).
+/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (46 pages, 6350169 bytes).
 PDF statistics:
- 804 PDF objects out of 1000 (max. 8388607)
- 607 compressed objects within 7 object streams
+ 802 PDF objects out of 1000 (max. 8388607)
+ 605 compressed objects within 7 object streams
  165 named destinations out of 1000 (max. 500000)
  643 words of extra memory for PDF output out of 10000 (max. 10000000)
 

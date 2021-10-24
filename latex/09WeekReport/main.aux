@@ -27,24 +27,30 @@
 \newlabel{fig:LV_dens_jpg_old}{{1}{2}{\textcolor {red}{update diagram* }A density plot on the training data of filetype jpg. The true blurry images are visualized in the blue histogram and the orange pdf-curve, and the sharp images are vizualised by the green histogram and the red pdf-curve. No gaussian blurred images have been included.\relax }{figure.caption.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The above images displays the laplacian output of two different true sharp images of filetype png and jpg. The lower images represent a normal output of the laplacian filter, while the upper images produces outliers.\relax }}{3}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:LV_very_sharp}{{2}{3}{The above images displays the laplacian output of two different true sharp images of filetype png and jpg. The lower images represent a normal output of the laplacian filter, while the upper images produces outliers.\relax }{figure.caption.4}{}}
-\newlabel{fig:LV_roc}{{4a}{4}{\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:LV_roc}{{a}{4}{\relax }{figure.caption.6}{}}
-\newlabel{fig:LV_dens_jpg}{{4b}{4}{\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:LV_dens_jpg}{{b}{4}{\relax }{figure.caption.6}{}}
-\newlabel{fig:LV_roc}{{4c}{4}{\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:LV_roc}{{c}{4}{\relax }{figure.caption.6}{}}
-\newlabel{fig:LV_thresh}{{4d}{4}{\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:LV_thresh}{{d}{4}{\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \relax }}{4}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:LV_final}{{4}{4}{\relax }{figure.caption.6}{}}
-\newlabel{fig:LV_roc}{{5a}{5}{\relax }{figure.caption.7}{}}
-\newlabel{sub@fig:LV_roc}{{a}{5}{\relax }{figure.caption.7}{}}
-\newlabel{fig:LV_dens_png}{{5b}{5}{\relax }{figure.caption.7}{}}
-\newlabel{sub@fig:LV_dens_png}{{b}{5}{\relax }{figure.caption.7}{}}
-\newlabel{fig:LV_roc}{{5c}{5}{\relax }{figure.caption.7}{}}
-\newlabel{sub@fig:LV_roc}{{c}{5}{\relax }{figure.caption.7}{}}
+\newlabel{fig:LV_roc}{{4a}{4}{Box plots on the sharp and blurry images including the rotated and mirrored images, and the gaussian blurred images with standard deviation of respectively 2, 3 and 4. The trend is that the median of the sharp images is above the median of the blurry images whose median is above all gaussian blurred medians. The medians of the gaussian images drops with the standard deviation, as expected.\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:LV_roc}{{a}{4}{Box plots on the sharp and blurry images including the rotated and mirrored images, and the gaussian blurred images with standard deviation of respectively 2, 3 and 4. The trend is that the median of the sharp images is above the median of the blurry images whose median is above all gaussian blurred medians. The medians of the gaussian images drops with the standard deviation, as expected.\relax }{figure.caption.6}{}}
+\newlabel{fig:LV_dens_jpg}{{4b}{4}{Density plot for sharp and blurry images without gaussian blur. The overlap between the scores of the two datasets is the smallest one seen at this point. The overlap represents the expected amount of falsely classified images.\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:LV_dens_jpg}{{b}{4}{Density plot for sharp and blurry images without gaussian blur. The overlap between the scores of the two datasets is the smallest one seen at this point. The overlap represents the expected amount of falsely classified images.\relax }{figure.caption.6}{}}
+\newlabel{fig:LV_roc}{{4c}{4}{The outputs provide a fine roc curve with AUC = 0.85, the highest at this point.\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:LV_roc}{{c}{4}{The outputs provide a fine roc curve with AUC = 0.85, the highest at this point.\relax }{figure.caption.6}{}}
+\newlabel{fig:LV_thresh}{{4d}{4}{All of the final values in the PPV curves have been set to 1, as TP and FP in the denominator are both 0 at the highest threshold used. Here, the highest threshold is 2, which is greater than the highest output of about 1.2\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:LV_thresh}{{d}{4}{All of the final values in the PPV curves have been set to 1, as TP and FP in the denominator are both 0 at the highest threshold used. Here, the highest threshold is 2, which is greater than the highest output of about 1.2\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Visualization of the output of variance of laplacian metric scores on input images of type jpg.\relax }}{4}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:LV_jpg}{{4}{4}{Visualization of the output of variance of laplacian metric scores on input images of type jpg.\relax }{figure.caption.6}{}}
+\newlabel{fig:LV_roc}{{5a}{5}{As is also the case for the jpg's, the median drops as the images becomes more blurry, assuming that the gaussian blurred images are more blurred than the originally blurred images. This could very well be, as the gaussian filter applies a smoothening effect to the image, whereas parts of images in inmanipulated blurred images may be sharp. However, the shared interval of sharp and blurry is bigger for this box plot than for the jpg one.\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:LV_roc}{{a}{5}{As is also the case for the jpg's, the median drops as the images becomes more blurry, assuming that the gaussian blurred images are more blurred than the originally blurred images. This could very well be, as the gaussian filter applies a smoothening effect to the image, whereas parts of images in inmanipulated blurred images may be sharp. However, the shared interval of sharp and blurry is bigger for this box plot than for the jpg one.\relax }{figure.caption.7}{}}
+\newlabel{fig:LV_dens_png}{{5b}{5}{The overlapping area of this density plot constitutes a bigger part of the area under the pdf's than in the density plot on the jpg output. Thus, the metric performs worse on the training data of png's than of jpg's.\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:LV_dens_png}{{b}{5}{The overlapping area of this density plot constitutes a bigger part of the area under the pdf's than in the density plot on the jpg output. Thus, the metric performs worse on the training data of png's than of jpg's.\relax }{figure.caption.7}{}}
+\newlabel{fig:LV_roc}{{5c}{5}{This roc curve with an AUC = 0.78 agrees with the density plot, that the metric performs better on the jpg's.\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:LV_roc}{{c}{5}{This roc curve with an AUC = 0.78 agrees with the density plot, that the metric performs better on the jpg's.\relax }{figure.caption.7}{}}
 \newlabel{fig:LV_thresh}{{5d}{5}{\relax }{figure.caption.7}{}}
 \newlabel{sub@fig:LV_thresh}{{d}{5}{\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \relax }}{5}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:LV_final}{{5}{5}{\relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}"Training" the metrics}{5}{subsection.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Vizualization of different rate and accuracy values depending on different thresholds.\relax }}{5}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:LV_png}{{5}{5}{Vizualization of different rate and accuracy values depending on different thresholds.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Combining metrics}{5}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}Merge of CPBD and Variance of Laplacian}{6}{subsubsection.1.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \relax }}{6}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:CPBD_LV_jpg}{{6}{6}{\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \relax }}{7}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:CPBD_LV_png}{{7}{7}{\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}"Training" the metrics}{7}{subsection.1.3}\protected@file@percent }
