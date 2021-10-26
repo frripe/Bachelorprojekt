@@ -17,7 +17,7 @@ from PIL import Image, ImageOps
 # get kernel size from command line
 s = float(sys.argv[1])
 r = 15
-types = ['png']#['jpg', 'png', 'bmp']
+types = ['jpg']#['jpg', 'png', 'bmp']
 
 # get truncate value for desired radius (should be odd integer)
 #radius = int(truncate * sigma + 0.5):          https://github.com/scipy/scipy/blob/c7ba5c0b239f10478d3c902cf4057edf1880b35d/scipy/ndimage/filters.py#L179
@@ -82,6 +82,3 @@ run_mirror(1, 35, 'NoProblems', 'synth_no_problems')
 run_gaussian(s,     get_truncate(s, r))
 run_gaussian(s*1.5, get_truncate(s*2, r))
 run_gaussian(s*2,   get_truncate(s*4, r))
-
-
-
