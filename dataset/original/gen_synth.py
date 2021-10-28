@@ -28,23 +28,23 @@ def get_truncate(sigma, radius):
 def run_mirror(fr, to, folder, synth_folder):
     for i in range(fr, to):
         for t in types:
-            filename = 'original/' + t + '/' + folder + '/' + str(i) + '.' + t
+            filename = 'original/' + t + '/' + folder + '/' + str(i).zfill(4) + '.' + t
             image = Image.open(filename)
             image_mir = ImageOps.mirror(image)
             image_flip = ImageOps.flip(image)
             image_flip_mir = ImageOps.flip(image_mir)
-            image_mir.save('original/' + t + '/' + synth_folder + '/' + str(i) + '.' + t)
-            image_flip.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)) + '.' + t)
-            image_flip_mir.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*2) + '.' + t)
+            image_mir.save('original/' + t + '/' + synth_folder + '/' + str(i).zfill(4) + '.' + t)
+            image_flip.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)).zfill(4) + '.' + t)
+            image_flip_mir.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*2).zfill(4) + '.' + t)
             for a in(1, 3):
                 image_rot1 = image.rotate(5)
                 image_rot2 = image.rotate(-5)
-                image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*3) + '.' + t)
-                image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*4) + '.' + t)
+                image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*3).zfill(4) + '.' + t)
+                image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*4).zfill(4) + '.' + t)
                 image_rot1 = image.rotate(2*5)
                 image_rot2 = image.rotate(-2*5)
-                image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*5) + '.' + t)
-                image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*6) + '.' + t)
+                image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*5).zfill(4) + '.' + t)
+                image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*6).zfill(4) + '.' + t)
 
 # apply blur to all images with no problems
 def run_gaussian(sigma, truncate):
@@ -58,21 +58,21 @@ def run_gaussian(sigma, truncate):
             os.mkdir(path)
         n1 = min(32, len(os.listdir('original/' + t + '/' + folder + '/')))
         for i in range(1, n1+1):
-            filename = 'original/' + t + '/' + folder + '/' + str(i) + '.' + t
+            filename = 'original/' + t + '/' + folder + '/' + str(i).zfill(4) + '.' + t
             image = skimage.io.imread(fname=filename)
             blurred = (skimage.filters.gaussian(
                 image, sigma=(sigma, sigma), truncate=truncate, multichannel=True
             ) * 255).astype(np.uint8)
-            skimage.io.imsave(path + str(i) + '.' + t, blurred, check_contrast=False)
+            skimage.io.imsave(path + str(i).zfill(4) + '.' + t, blurred, check_contrast=False)
 
         n2 = min(32, len(os.listdir('original/' + t + '/' + synth_folder + '/')))
         for i in range(1, n2+1):
-            filename = 'original/' + t + '/' + synth_folder + '/' + str(i) + '.' + t
+            filename = 'original/' + t + '/' + synth_folder + '/' + str(i).zfill(4) + '.' + t
             image = skimage.io.imread(fname=filename)
             blurred = (skimage.filters.gaussian(
                 image, sigma=(sigma, sigma), truncate=truncate, multichannel=True
             ) * 255).astype(np.uint8)
-            skimage.io.imsave(path + str(i+n1) + '.' + t, blurred, check_contrast=False)
+            skimage.io.imsave(path + str(i+n1).zfill(4) + '.' + t, blurred, check_contrast=False)
 
 # run
 run_mirror(1, 48, 'Blurry',     'synth_blurry')

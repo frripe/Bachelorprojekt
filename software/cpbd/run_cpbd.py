@@ -11,14 +11,12 @@ THRESHOLD = float(argv[2])
 BETA = float(argv[3])
 #path = str(input()).rstrip()
 # images in the folder
-n = os.listdir(path)
 
 file_object = open('cpbd/output/time.txt', 'a') # added
 #for i in range(1, n + 1):
-for i in n:
+for im in sorted(os.listdir(path)):
     time_start = time.time()
-    input_image = imageio.imread(path + i, pilmode='L')
+    input_image = imageio.imread(path + im, pilmode='L')
     print(cpbd.compute(input_image, THRESHOLD, BETA))
     time_end = time.time()
     file_object.write(str(time_end - time_start) + "\n") # added # measured in seconds
-

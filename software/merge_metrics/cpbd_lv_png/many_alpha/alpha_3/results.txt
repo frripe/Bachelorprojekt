@@ -1,6 +1,6 @@
 Merge of CPBD and Laplacian Variance
 
-...... threshold: 2.159
+...... threshold: 1.929
 TPR, sensitivity: 0.0
 FPR             : 0.0
 TNR, specificity: 1.0
@@ -8,191 +8,143 @@ PPV, precision  : 1.0
 ACC             : 0.589
 F1-score        : 0.0
 
-...... threshold: 1.159
-TPR, sensitivity: 0.004
-FPR             : 0.0
-TNR, specificity: 1.0
-PPV, precision  : 1.0
+...... threshold: 0.929
+TPR, sensitivity: 0.0
+FPR             : 0.003
+TNR, specificity: 0.997
+PPV, precision  : 0.0
+ACC             : 0.587
+F1-score        : 0.0
+
+...... threshold: 0.927
+TPR, sensitivity: 0.0
+FPR             : 0.006
+TNR, specificity: 0.994
+PPV, precision  : 0.0
+ACC             : 0.586
+F1-score        : 0.0
+
+...... threshold: 0.915
+TPR, sensitivity: 0.017
+FPR             : 0.006
+TNR, specificity: 0.994
+PPV, precision  : 0.667
+ACC             : 0.593
+F1-score        : 0.033
+
+...... threshold: 0.91
+TPR, sensitivity: 0.017
+FPR             : 0.009
+TNR, specificity: 0.991
+PPV, precision  : 0.571
 ACC             : 0.591
-F1-score        : 0.008
+F1-score        : 0.033
 
-...... threshold: 1.075
-TPR, sensitivity: 0.06
-FPR             : 0.0
-TNR, specificity: 1.0
-PPV, precision  : 1.0
-ACC             : 0.614
-F1-score        : 0.112
-
-...... threshold: 1.066
-TPR, sensitivity: 0.06
-FPR             : 0.006
-TNR, specificity: 0.994
-PPV, precision  : 0.875
-ACC             : 0.61
-F1-score        : 0.112
-
-...... threshold: 1.052
-TPR, sensitivity: 0.077
-FPR             : 0.006
-TNR, specificity: 0.994
-PPV, precision  : 0.9
-ACC             : 0.617
-F1-score        : 0.141
-
-...... threshold: 1.049
-TPR, sensitivity: 0.077
+...... threshold: 0.893
+TPR, sensitivity: 0.021
 FPR             : 0.009
 TNR, specificity: 0.991
-PPV, precision  : 0.857
-ACC             : 0.615
-F1-score        : 0.141
+PPV, precision  : 0.625
+ACC             : 0.593
+F1-score        : 0.041
 
-...... threshold: 1.028
-TPR, sensitivity: 0.106
-FPR             : 0.009
-TNR, specificity: 0.991
-PPV, precision  : 0.893
-ACC             : 0.628
-F1-score        : 0.19
-
-...... threshold: 1.027
-TPR, sensitivity: 0.106
+...... threshold: 0.887
+TPR, sensitivity: 0.021
 FPR             : 0.012
 TNR, specificity: 0.988
-PPV, precision  : 0.862
-ACC             : 0.626
-F1-score        : 0.189
+PPV, precision  : 0.556
+ACC             : 0.591
+F1-score        : 0.041
 
-...... threshold: 1.004
-TPR, sensitivity: 0.149
+...... threshold: 0.871
+TPR, sensitivity: 0.026
 FPR             : 0.012
 TNR, specificity: 0.988
-PPV, precision  : 0.897
-ACC             : 0.643
-F1-score        : 0.255
+PPV, precision  : 0.6
+ACC             : 0.593
+F1-score        : 0.049
 
-...... threshold: 1.004
-TPR, sensitivity: 0.149
+...... threshold: 0.868
+TPR, sensitivity: 0.026
 FPR             : 0.015
 TNR, specificity: 0.985
+PPV, precision  : 0.545
+ACC             : 0.591
+F1-score        : 0.049
+
+...... threshold: 0.861
+TPR, sensitivity: 0.038
+FPR             : 0.015
+TNR, specificity: 0.985
+PPV, precision  : 0.643
+ACC             : 0.596
+F1-score        : 0.072
+
+...... threshold: 0.861
+TPR, sensitivity: 0.038
+FPR             : 0.018
+TNR, specificity: 0.982
+PPV, precision  : 0.6
+ACC             : 0.594
+F1-score        : 0.072
+
+...... threshold: 0.801
+TPR, sensitivity: 0.234
+FPR             : 0.018
+TNR, specificity: 0.982
+PPV, precision  : 0.902
+ACC             : 0.675
+F1-score        : 0.372
+
+...... threshold: 0.801
+TPR, sensitivity: 0.234
+FPR             : 0.024
+TNR, specificity: 0.976
+PPV, precision  : 0.873
+ACC             : 0.671
+F1-score        : 0.369
+
+...... threshold: 0.796
+TPR, sensitivity: 0.238
+FPR             : 0.024
+TNR, specificity: 0.976
 PPV, precision  : 0.875
-ACC             : 0.642
-F1-score        : 0.255
+ACC             : 0.673
+F1-score        : 0.375
 
-...... threshold: 1.002
-TPR, sensitivity: 0.162
-FPR             : 0.015
-TNR, specificity: 0.985
-PPV, precision  : 0.884
-ACC             : 0.647
-F1-score        : 0.273
-
-...... threshold: 0.999
-TPR, sensitivity: 0.162
-FPR             : 0.018
-TNR, specificity: 0.982
-PPV, precision  : 0.864
-ACC             : 0.645
-F1-score        : 0.272
-
-...... threshold: 0.998
-TPR, sensitivity: 0.166
-FPR             : 0.018
-TNR, specificity: 0.982
-PPV, precision  : 0.867
-ACC             : 0.647
-F1-score        : 0.279
-
-...... threshold: 0.997
-TPR, sensitivity: 0.166
-FPR             : 0.021
-TNR, specificity: 0.979
-PPV, precision  : 0.848
-ACC             : 0.645
-F1-score        : 0.278
-
-...... threshold: 0.996
-TPR, sensitivity: 0.17
-FPR             : 0.021
-TNR, specificity: 0.979
-PPV, precision  : 0.851
-ACC             : 0.647
-F1-score        : 0.284
-
-...... threshold: 0.996
-TPR, sensitivity: 0.17
-FPR             : 0.027
-TNR, specificity: 0.973
-PPV, precision  : 0.816
-ACC             : 0.643
-F1-score        : 0.282
-
-...... threshold: 0.995
-TPR, sensitivity: 0.174
-FPR             : 0.027
-TNR, specificity: 0.973
-PPV, precision  : 0.82
-ACC             : 0.645
-F1-score        : 0.288
-
-...... threshold: 0.989
-TPR, sensitivity: 0.174
-FPR             : 0.03
-TNR, specificity: 0.97
-PPV, precision  : 0.804
-ACC             : 0.643
-F1-score        : 0.287
-
-...... threshold: 0.968
-TPR, sensitivity: 0.217
-FPR             : 0.03
-TNR, specificity: 0.97
+...... threshold: 0.795
+TPR, sensitivity: 0.238
+FPR             : 0.033
+TNR, specificity: 0.967
 PPV, precision  : 0.836
-ACC             : 0.661
-F1-score        : 0.345
+ACC             : 0.668
+F1-score        : 0.371
 
-...... threshold: 0.961
-TPR, sensitivity: 0.217
+...... threshold: 0.794
+TPR, sensitivity: 0.243
 FPR             : 0.033
 TNR, specificity: 0.967
-PPV, precision  : 0.823
-ACC             : 0.659
-F1-score        : 0.343
+PPV, precision  : 0.838
+ACC             : 0.67
+F1-score        : 0.376
 
-...... threshold: 0.948
-TPR, sensitivity: 0.234
-FPR             : 0.033
-TNR, specificity: 0.967
-PPV, precision  : 0.833
-ACC             : 0.666
-F1-score        : 0.365
-
-...... threshold: 0.944
-TPR, sensitivity: 0.234
+...... threshold: 0.794
+TPR, sensitivity: 0.243
 FPR             : 0.036
 TNR, specificity: 0.964
-PPV, precision  : 0.821
-ACC             : 0.664
-F1-score        : 0.364
+PPV, precision  : 0.826
+ACC             : 0.668
+F1-score        : 0.375
 
-...... threshold: 0.938
-TPR, sensitivity: 0.238
+...... threshold: 0.793
+TPR, sensitivity: 0.251
 FPR             : 0.036
 TNR, specificity: 0.964
-PPV, precision  : 0.824
-ACC             : 0.666
-F1-score        : 0.37
+PPV, precision  : 0.831
+ACC             : 0.671
+F1-score        : 0.386
 
-...... threshold: 0.928
-TPR, sensitivity: 0.238
-FPR             : 0.039
-TNR, specificity: 0.961
-PPV, precision  : 0.812
-ACC             : 0.664
-F1-score        : 0.368
-
-...... threshold: 0.92
+...... threshold: 0.792
 TPR, sensitivity: 0.251
 FPR             : 0.039
 TNR, specificity: 0.961
@@ -200,879 +152,783 @@ PPV, precision  : 0.819
 ACC             : 0.67
 F1-score        : 0.384
 
-...... threshold: 0.917
-TPR, sensitivity: 0.251
+...... threshold: 0.788
+TPR, sensitivity: 0.255
+FPR             : 0.039
+TNR, specificity: 0.961
+PPV, precision  : 0.822
+ACC             : 0.671
+F1-score        : 0.39
+
+...... threshold: 0.788
+TPR, sensitivity: 0.255
+FPR             : 0.042
+TNR, specificity: 0.958
+PPV, precision  : 0.811
+ACC             : 0.67
+F1-score        : 0.388
+
+...... threshold: 0.788
+TPR, sensitivity: 0.26
+FPR             : 0.042
+TNR, specificity: 0.958
+PPV, precision  : 0.813
+ACC             : 0.671
+F1-score        : 0.394
+
+...... threshold: 0.786
+TPR, sensitivity: 0.26
 FPR             : 0.045
 TNR, specificity: 0.955
-PPV, precision  : 0.797
-ACC             : 0.666
-F1-score        : 0.382
+PPV, precision  : 0.803
+ACC             : 0.67
+F1-score        : 0.392
 
-...... threshold: 0.916
-TPR, sensitivity: 0.255
+...... threshold: 0.78
+TPR, sensitivity: 0.311
 FPR             : 0.045
 TNR, specificity: 0.955
-PPV, precision  : 0.8
-ACC             : 0.668
-F1-score        : 0.387
-
-...... threshold: 0.915
-TPR, sensitivity: 0.255
-FPR             : 0.047
-TNR, specificity: 0.953
-PPV, precision  : 0.789
-ACC             : 0.666
-F1-score        : 0.386
-
-...... threshold: 0.912
-TPR, sensitivity: 0.264
-FPR             : 0.047
-TNR, specificity: 0.953
-PPV, precision  : 0.795
-ACC             : 0.67
-F1-score        : 0.396
-
-...... threshold: 0.907
-TPR, sensitivity: 0.264
-FPR             : 0.05
-TNR, specificity: 0.95
-PPV, precision  : 0.785
-ACC             : 0.668
-F1-score        : 0.395
-
-...... threshold: 0.895
-TPR, sensitivity: 0.281
-FPR             : 0.05
-TNR, specificity: 0.95
-PPV, precision  : 0.795
-ACC             : 0.675
-F1-score        : 0.415
-
-...... threshold: 0.878
-TPR, sensitivity: 0.281
-FPR             : 0.065
-TNR, specificity: 0.935
-PPV, precision  : 0.75
-ACC             : 0.666
-F1-score        : 0.409
-
-...... threshold: 0.875
-TPR, sensitivity: 0.289
-FPR             : 0.065
-TNR, specificity: 0.935
-PPV, precision  : 0.756
-ACC             : 0.67
-F1-score        : 0.418
-
-...... threshold: 0.873
-TPR, sensitivity: 0.289
-FPR             : 0.074
-TNR, specificity: 0.926
-PPV, precision  : 0.731
-ACC             : 0.664
-F1-score        : 0.415
-
-...... threshold: 0.866
-TPR, sensitivity: 0.315
-FPR             : 0.074
-TNR, specificity: 0.926
-PPV, precision  : 0.747
-ACC             : 0.675
-F1-score        : 0.443
-
-...... threshold: 0.865
-TPR, sensitivity: 0.315
-FPR             : 0.077
-TNR, specificity: 0.923
-PPV, precision  : 0.74
-ACC             : 0.673
-F1-score        : 0.442
-
-...... threshold: 0.861
-TPR, sensitivity: 0.336
-FPR             : 0.077
-TNR, specificity: 0.923
-PPV, precision  : 0.752
-ACC             : 0.682
-F1-score        : 0.465
-
-...... threshold: 0.86
-TPR, sensitivity: 0.336
-FPR             : 0.08
-TNR, specificity: 0.92
-PPV, precision  : 0.745
-ACC             : 0.68
-F1-score        : 0.463
-
-...... threshold: 0.859
-TPR, sensitivity: 0.345
-FPR             : 0.08
-TNR, specificity: 0.92
-PPV, precision  : 0.75
-ACC             : 0.684
-F1-score        : 0.472
-
-...... threshold: 0.858
-TPR, sensitivity: 0.345
-FPR             : 0.086
-TNR, specificity: 0.914
-PPV, precision  : 0.736
-ACC             : 0.68
-F1-score        : 0.47
-
-...... threshold: 0.851
-TPR, sensitivity: 0.353
-FPR             : 0.086
-TNR, specificity: 0.914
-PPV, precision  : 0.741
-ACC             : 0.684
-F1-score        : 0.478
-
-...... threshold: 0.848
-TPR, sensitivity: 0.353
-FPR             : 0.092
-TNR, specificity: 0.908
-PPV, precision  : 0.728
-ACC             : 0.68
-F1-score        : 0.476
-
-...... threshold: 0.846
-TPR, sensitivity: 0.357
-FPR             : 0.092
-TNR, specificity: 0.908
-PPV, precision  : 0.73
-ACC             : 0.682
-F1-score        : 0.48
-
-...... threshold: 0.846
-TPR, sensitivity: 0.357
-FPR             : 0.095
-TNR, specificity: 0.905
-PPV, precision  : 0.724
-ACC             : 0.68
-F1-score        : 0.479
-
-...... threshold: 0.84
-TPR, sensitivity: 0.374
-FPR             : 0.095
-TNR, specificity: 0.905
-PPV, precision  : 0.733
-ACC             : 0.687
-F1-score        : 0.496
-
-...... threshold: 0.836
-TPR, sensitivity: 0.374
-FPR             : 0.101
-TNR, specificity: 0.899
-PPV, precision  : 0.721
-ACC             : 0.684
-F1-score        : 0.493
-
-...... threshold: 0.834
-TPR, sensitivity: 0.383
-FPR             : 0.101
-TNR, specificity: 0.899
-PPV, precision  : 0.726
-ACC             : 0.687
-F1-score        : 0.501
-
-...... threshold: 0.833
-TPR, sensitivity: 0.383
-FPR             : 0.104
-TNR, specificity: 0.896
-PPV, precision  : 0.72
-ACC             : 0.685
-F1-score        : 0.5
-
-...... threshold: 0.831
-TPR, sensitivity: 0.396
-FPR             : 0.104
-TNR, specificity: 0.896
-PPV, precision  : 0.727
+PPV, precision  : 0.83
 ACC             : 0.691
-F1-score        : 0.512
-
-...... threshold: 0.831
-TPR, sensitivity: 0.396
-FPR             : 0.107
-TNR, specificity: 0.893
-PPV, precision  : 0.721
-ACC             : 0.689
-F1-score        : 0.511
-
-...... threshold: 0.829
-TPR, sensitivity: 0.404
-FPR             : 0.107
-TNR, specificity: 0.893
-PPV, precision  : 0.725
-ACC             : 0.692
-F1-score        : 0.519
-
-...... threshold: 0.824
-TPR, sensitivity: 0.404
-FPR             : 0.119
-TNR, specificity: 0.881
-PPV, precision  : 0.704
-ACC             : 0.685
-F1-score        : 0.514
-
-...... threshold: 0.82
-TPR, sensitivity: 0.421
-FPR             : 0.119
-TNR, specificity: 0.881
-PPV, precision  : 0.712
-ACC             : 0.692
-F1-score        : 0.529
-
-...... threshold: 0.819
-TPR, sensitivity: 0.421
-FPR             : 0.122
-TNR, specificity: 0.878
-PPV, precision  : 0.707
-ACC             : 0.691
-F1-score        : 0.528
-
-...... threshold: 0.814
-TPR, sensitivity: 0.426
-FPR             : 0.122
-TNR, specificity: 0.878
-PPV, precision  : 0.709
-ACC             : 0.692
-F1-score        : 0.532
-
-...... threshold: 0.81
-TPR, sensitivity: 0.426
-FPR             : 0.128
-TNR, specificity: 0.872
-PPV, precision  : 0.699
-ACC             : 0.689
-F1-score        : 0.529
-
-...... threshold: 0.809
-TPR, sensitivity: 0.434
-FPR             : 0.128
-TNR, specificity: 0.872
-PPV, precision  : 0.703
-ACC             : 0.692
-F1-score        : 0.537
-
-...... threshold: 0.808
-TPR, sensitivity: 0.434
-FPR             : 0.134
-TNR, specificity: 0.866
-PPV, precision  : 0.694
-ACC             : 0.689
-F1-score        : 0.534
-
-...... threshold: 0.804
-TPR, sensitivity: 0.451
-FPR             : 0.134
-TNR, specificity: 0.866
-PPV, precision  : 0.702
-ACC             : 0.696
-F1-score        : 0.549
-
-...... threshold: 0.803
-TPR, sensitivity: 0.451
-FPR             : 0.136
-TNR, specificity: 0.864
-PPV, precision  : 0.697
-ACC             : 0.694
-F1-score        : 0.548
-
-...... threshold: 0.802
-TPR, sensitivity: 0.46
-FPR             : 0.136
-TNR, specificity: 0.864
-PPV, precision  : 0.701
-ACC             : 0.698
-F1-score        : 0.555
-
-...... threshold: 0.802
-TPR, sensitivity: 0.46
-FPR             : 0.139
-TNR, specificity: 0.861
-PPV, precision  : 0.697
-ACC             : 0.696
-F1-score        : 0.554
-
-...... threshold: 0.8
-TPR, sensitivity: 0.477
-FPR             : 0.139
-TNR, specificity: 0.861
-PPV, precision  : 0.704
-ACC             : 0.703
-F1-score        : 0.569
-
-...... threshold: 0.799
-TPR, sensitivity: 0.477
-FPR             : 0.145
-TNR, specificity: 0.855
-PPV, precision  : 0.696
-ACC             : 0.699
-F1-score        : 0.566
-
-...... threshold: 0.793
-TPR, sensitivity: 0.515
-FPR             : 0.145
-TNR, specificity: 0.855
-PPV, precision  : 0.712
-ACC             : 0.715
-F1-score        : 0.598
-
-...... threshold: 0.793
-TPR, sensitivity: 0.515
-FPR             : 0.148
-TNR, specificity: 0.852
-PPV, precision  : 0.708
-ACC             : 0.713
-F1-score        : 0.596
-
-...... threshold: 0.792
-TPR, sensitivity: 0.528
-FPR             : 0.148
-TNR, specificity: 0.852
-PPV, precision  : 0.713
-ACC             : 0.719
-F1-score        : 0.606
-
-...... threshold: 0.791
-TPR, sensitivity: 0.528
-FPR             : 0.151
-TNR, specificity: 0.849
-PPV, precision  : 0.709
-ACC             : 0.717
-F1-score        : 0.605
-
-...... threshold: 0.787
-TPR, sensitivity: 0.553
-FPR             : 0.151
-TNR, specificity: 0.849
-PPV, precision  : 0.718
-ACC             : 0.727
-F1-score        : 0.625
-
-...... threshold: 0.785
-TPR, sensitivity: 0.553
-FPR             : 0.154
-TNR, specificity: 0.846
-PPV, precision  : 0.714
-ACC             : 0.726
-F1-score        : 0.624
-
-...... threshold: 0.784
-TPR, sensitivity: 0.566
-FPR             : 0.154
-TNR, specificity: 0.846
-PPV, precision  : 0.719
-ACC             : 0.731
-F1-score        : 0.633
-
-...... threshold: 0.784
-TPR, sensitivity: 0.566
-FPR             : 0.16
-TNR, specificity: 0.84
-PPV, precision  : 0.711
-ACC             : 0.727
-F1-score        : 0.63
-
-...... threshold: 0.783
-TPR, sensitivity: 0.574
-FPR             : 0.16
-TNR, specificity: 0.84
-PPV, precision  : 0.714
-ACC             : 0.731
-F1-score        : 0.637
-
-...... threshold: 0.783
-TPR, sensitivity: 0.574
-FPR             : 0.163
-TNR, specificity: 0.837
-PPV, precision  : 0.711
-ACC             : 0.729
-F1-score        : 0.635
-
-...... threshold: 0.782
-TPR, sensitivity: 0.579
-FPR             : 0.163
-TNR, specificity: 0.837
-PPV, precision  : 0.712
-ACC             : 0.731
-F1-score        : 0.638
-
-...... threshold: 0.782
-TPR, sensitivity: 0.579
-FPR             : 0.169
-TNR, specificity: 0.831
-PPV, precision  : 0.705
-ACC             : 0.727
-F1-score        : 0.636
-
-...... threshold: 0.782
-TPR, sensitivity: 0.583
-FPR             : 0.169
-TNR, specificity: 0.831
-PPV, precision  : 0.706
-ACC             : 0.729
-F1-score        : 0.639
-
-...... threshold: 0.781
-TPR, sensitivity: 0.583
-FPR             : 0.172
-TNR, specificity: 0.828
-PPV, precision  : 0.703
-ACC             : 0.727
-F1-score        : 0.637
+F1-score        : 0.452
 
 ...... threshold: 0.78
-TPR, sensitivity: 0.591
-FPR             : 0.172
-TNR, specificity: 0.828
-PPV, precision  : 0.706
-ACC             : 0.731
-F1-score        : 0.644
-
-...... threshold: 0.78
-TPR, sensitivity: 0.591
-FPR             : 0.175
-TNR, specificity: 0.825
-PPV, precision  : 0.702
-ACC             : 0.729
-F1-score        : 0.642
-
-...... threshold: 0.779
-TPR, sensitivity: 0.604
-FPR             : 0.175
-TNR, specificity: 0.825
-PPV, precision  : 0.706
-ACC             : 0.734
-F1-score        : 0.651
-
-...... threshold: 0.779
-TPR, sensitivity: 0.604
-FPR             : 0.178
-TNR, specificity: 0.822
-PPV, precision  : 0.703
-ACC             : 0.733
-F1-score        : 0.65
-
-...... threshold: 0.776
-TPR, sensitivity: 0.621
-FPR             : 0.178
-TNR, specificity: 0.822
-PPV, precision  : 0.709
-ACC             : 0.74
-F1-score        : 0.662
-
-...... threshold: 0.776
-TPR, sensitivity: 0.621
-FPR             : 0.181
-TNR, specificity: 0.819
-PPV, precision  : 0.705
-ACC             : 0.738
-F1-score        : 0.661
-
-...... threshold: 0.773
-TPR, sensitivity: 0.638
-FPR             : 0.181
-TNR, specificity: 0.819
-PPV, precision  : 0.711
-ACC             : 0.745
-F1-score        : 0.673
-
-...... threshold: 0.772
-TPR, sensitivity: 0.638
-FPR             : 0.184
-TNR, specificity: 0.816
-PPV, precision  : 0.708
-ACC             : 0.743
-F1-score        : 0.671
-
-...... threshold: 0.771
-TPR, sensitivity: 0.647
-FPR             : 0.184
-TNR, specificity: 0.816
-PPV, precision  : 0.71
-ACC             : 0.747
-F1-score        : 0.677
-
-...... threshold: 0.771
-TPR, sensitivity: 0.647
-FPR             : 0.19
-TNR, specificity: 0.81
-PPV, precision  : 0.704
-ACC             : 0.743
-F1-score        : 0.674
-
-...... threshold: 0.77
-TPR, sensitivity: 0.66
-FPR             : 0.19
-TNR, specificity: 0.81
-PPV, precision  : 0.708
-ACC             : 0.748
-F1-score        : 0.683
-
-...... threshold: 0.768
-TPR, sensitivity: 0.66
-FPR             : 0.199
-TNR, specificity: 0.801
-PPV, precision  : 0.698
-ACC             : 0.743
-F1-score        : 0.678
-
-...... threshold: 0.768
-TPR, sensitivity: 0.664
-FPR             : 0.199
-TNR, specificity: 0.801
-PPV, precision  : 0.7
-ACC             : 0.745
-F1-score        : 0.681
-
-...... threshold: 0.766
-TPR, sensitivity: 0.664
-FPR             : 0.214
-TNR, specificity: 0.786
-PPV, precision  : 0.684
-ACC             : 0.736
-F1-score        : 0.674
-
-...... threshold: 0.764
-TPR, sensitivity: 0.672
-FPR             : 0.214
-TNR, specificity: 0.786
-PPV, precision  : 0.687
-ACC             : 0.74
-F1-score        : 0.68
-
-...... threshold: 0.764
-TPR, sensitivity: 0.672
-FPR             : 0.217
-TNR, specificity: 0.783
-PPV, precision  : 0.684
-ACC             : 0.738
-F1-score        : 0.678
-
-...... threshold: 0.762
-TPR, sensitivity: 0.685
-FPR             : 0.217
-TNR, specificity: 0.783
-PPV, precision  : 0.688
-ACC             : 0.743
-F1-score        : 0.687
-
-...... threshold: 0.762
-TPR, sensitivity: 0.685
-FPR             : 0.22
-TNR, specificity: 0.78
-PPV, precision  : 0.685
-ACC             : 0.741
-F1-score        : 0.685
-
-...... threshold: 0.756
-TPR, sensitivity: 0.715
-FPR             : 0.22
-TNR, specificity: 0.78
-PPV, precision  : 0.694
-ACC             : 0.753
-F1-score        : 0.704
-
-...... threshold: 0.756
-TPR, sensitivity: 0.715
-FPR             : 0.223
-TNR, specificity: 0.777
-PPV, precision  : 0.691
-ACC             : 0.752
-F1-score        : 0.703
+TPR, sensitivity: 0.311
+FPR             : 0.047
+TNR, specificity: 0.953
+PPV, precision  : 0.82
+ACC             : 0.689
+F1-score        : 0.451
 
 ...... threshold: 0.755
-TPR, sensitivity: 0.732
-FPR             : 0.223
-TNR, specificity: 0.777
-PPV, precision  : 0.696
-ACC             : 0.759
-F1-score        : 0.714
+TPR, sensitivity: 0.477
+FPR             : 0.047
+TNR, specificity: 0.953
+PPV, precision  : 0.875
+ACC             : 0.757
+F1-score        : 0.617
 
-...... threshold: 0.749
-TPR, sensitivity: 0.732
-FPR             : 0.231
-TNR, specificity: 0.769
-PPV, precision  : 0.688
-ACC             : 0.753
-F1-score        : 0.709
+...... threshold: 0.754
+TPR, sensitivity: 0.477
+FPR             : 0.05
+TNR, specificity: 0.95
+PPV, precision  : 0.868
+ACC             : 0.755
+F1-score        : 0.615
+
+...... threshold: 0.747
+TPR, sensitivity: 0.523
+FPR             : 0.05
+TNR, specificity: 0.95
+PPV, precision  : 0.879
+ACC             : 0.774
+F1-score        : 0.656
+
+...... threshold: 0.747
+TPR, sensitivity: 0.523
+FPR             : 0.053
+TNR, specificity: 0.947
+PPV, precision  : 0.872
+ACC             : 0.773
+F1-score        : 0.654
 
 ...... threshold: 0.745
-TPR, sensitivity: 0.753
-FPR             : 0.231
-TNR, specificity: 0.769
-PPV, precision  : 0.694
-ACC             : 0.762
-F1-score        : 0.722
+TPR, sensitivity: 0.532
+FPR             : 0.053
+TNR, specificity: 0.947
+PPV, precision  : 0.874
+ACC             : 0.776
+F1-score        : 0.661
 
 ...... threshold: 0.745
-TPR, sensitivity: 0.753
-FPR             : 0.237
-TNR, specificity: 0.763
-PPV, precision  : 0.689
-ACC             : 0.759
-F1-score        : 0.72
-
-...... threshold: 0.744
-TPR, sensitivity: 0.762
-FPR             : 0.237
-TNR, specificity: 0.763
-PPV, precision  : 0.691
-ACC             : 0.762
-F1-score        : 0.725
-
-...... threshold: 0.744
-TPR, sensitivity: 0.762
-FPR             : 0.24
-TNR, specificity: 0.76
-PPV, precision  : 0.688
-ACC             : 0.76
-F1-score        : 0.723
+TPR, sensitivity: 0.532
+FPR             : 0.059
+TNR, specificity: 0.941
+PPV, precision  : 0.862
+ACC             : 0.773
+F1-score        : 0.658
 
 ...... threshold: 0.743
-TPR, sensitivity: 0.766
-FPR             : 0.24
-TNR, specificity: 0.76
-PPV, precision  : 0.69
-ACC             : 0.762
-F1-score        : 0.726
+TPR, sensitivity: 0.54
+FPR             : 0.059
+TNR, specificity: 0.941
+PPV, precision  : 0.864
+ACC             : 0.776
+F1-score        : 0.665
+
+...... threshold: 0.743
+TPR, sensitivity: 0.54
+FPR             : 0.062
+TNR, specificity: 0.938
+PPV, precision  : 0.858
+ACC             : 0.774
+F1-score        : 0.663
 
 ...... threshold: 0.742
-TPR, sensitivity: 0.766
-FPR             : 0.249
-TNR, specificity: 0.751
-PPV, precision  : 0.682
-ACC             : 0.757
-F1-score        : 0.721
+TPR, sensitivity: 0.549
+FPR             : 0.062
+TNR, specificity: 0.938
+PPV, precision  : 0.86
+ACC             : 0.778
+F1-score        : 0.67
 
-...... threshold: 0.738
-TPR, sensitivity: 0.787
-FPR             : 0.249
-TNR, specificity: 0.751
-PPV, precision  : 0.688
-ACC             : 0.766
-F1-score        : 0.734
+...... threshold: 0.741
+TPR, sensitivity: 0.549
+FPR             : 0.068
+TNR, specificity: 0.932
+PPV, precision  : 0.849
+ACC             : 0.774
+F1-score        : 0.667
+
+...... threshold: 0.739
+TPR, sensitivity: 0.553
+FPR             : 0.068
+TNR, specificity: 0.932
+PPV, precision  : 0.85
+ACC             : 0.776
+F1-score        : 0.67
+
+...... threshold: 0.739
+TPR, sensitivity: 0.553
+FPR             : 0.071
+TNR, specificity: 0.929
+PPV, precision  : 0.844
+ACC             : 0.774
+F1-score        : 0.668
+
+...... threshold: 0.739
+TPR, sensitivity: 0.557
+FPR             : 0.071
+TNR, specificity: 0.929
+PPV, precision  : 0.845
+ACC             : 0.776
+F1-score        : 0.672
+
+...... threshold: 0.737
+TPR, sensitivity: 0.557
+FPR             : 0.074
+TNR, specificity: 0.926
+PPV, precision  : 0.84
+ACC             : 0.774
+F1-score        : 0.67
 
 ...... threshold: 0.735
-TPR, sensitivity: 0.787
-FPR             : 0.255
-TNR, specificity: 0.745
-PPV, precision  : 0.683
-ACC             : 0.762
-F1-score        : 0.731
+TPR, sensitivity: 0.579
+FPR             : 0.074
+TNR, specificity: 0.926
+PPV, precision  : 0.845
+ACC             : 0.783
+F1-score        : 0.687
 
-...... threshold: 0.734
-TPR, sensitivity: 0.8
-FPR             : 0.255
-TNR, specificity: 0.745
-PPV, precision  : 0.686
-ACC             : 0.767
-F1-score        : 0.739
-
-...... threshold: 0.732
-TPR, sensitivity: 0.8
-FPR             : 0.267
-TNR, specificity: 0.733
-PPV, precision  : 0.676
-ACC             : 0.76
-F1-score        : 0.733
-
-...... threshold: 0.731
-TPR, sensitivity: 0.804
-FPR             : 0.267
-TNR, specificity: 0.733
-PPV, precision  : 0.677
-ACC             : 0.762
-F1-score        : 0.735
+...... threshold: 0.735
+TPR, sensitivity: 0.579
+FPR             : 0.077
+TNR, specificity: 0.923
+PPV, precision  : 0.84
+ACC             : 0.781
+F1-score        : 0.685
 
 ...... threshold: 0.73
-TPR, sensitivity: 0.804
-FPR             : 0.273
-TNR, specificity: 0.727
-PPV, precision  : 0.673
-ACC             : 0.759
+TPR, sensitivity: 0.609
+FPR             : 0.077
+TNR, specificity: 0.923
+PPV, precision  : 0.846
+ACC             : 0.794
+F1-score        : 0.708
+
+...... threshold: 0.73
+TPR, sensitivity: 0.609
+FPR             : 0.08
+TNR, specificity: 0.92
+PPV, precision  : 0.841
+ACC             : 0.792
+F1-score        : 0.706
+
+...... threshold: 0.728
+TPR, sensitivity: 0.621
+FPR             : 0.08
+TNR, specificity: 0.92
+PPV, precision  : 0.844
+ACC             : 0.797
+F1-score        : 0.716
+
+...... threshold: 0.728
+TPR, sensitivity: 0.621
+FPR             : 0.083
+TNR, specificity: 0.917
+PPV, precision  : 0.839
+ACC             : 0.795
+F1-score        : 0.714
+
+...... threshold: 0.727
+TPR, sensitivity: 0.626
+FPR             : 0.083
+TNR, specificity: 0.917
+PPV, precision  : 0.84
+ACC             : 0.797
+F1-score        : 0.717
+
+...... threshold: 0.727
+TPR, sensitivity: 0.626
+FPR             : 0.086
+TNR, specificity: 0.914
+PPV, precision  : 0.835
+ACC             : 0.795
+F1-score        : 0.715
+
+...... threshold: 0.724
+TPR, sensitivity: 0.647
+FPR             : 0.086
+TNR, specificity: 0.914
+PPV, precision  : 0.84
+ACC             : 0.804
+F1-score        : 0.731
+
+...... threshold: 0.723
+TPR, sensitivity: 0.647
+FPR             : 0.092
+TNR, specificity: 0.908
+PPV, precision  : 0.831
+ACC             : 0.801
+F1-score        : 0.727
+
+...... threshold: 0.721
+TPR, sensitivity: 0.655
+FPR             : 0.092
+TNR, specificity: 0.908
+PPV, precision  : 0.832
+ACC             : 0.804
 F1-score        : 0.733
 
-...... threshold: 0.726
-TPR, sensitivity: 0.83
-FPR             : 0.273
-TNR, specificity: 0.727
-PPV, precision  : 0.679
-ACC             : 0.769
-F1-score        : 0.747
-
-...... threshold: 0.725
-TPR, sensitivity: 0.83
-FPR             : 0.279
-TNR, specificity: 0.721
-PPV, precision  : 0.675
-ACC             : 0.766
-F1-score        : 0.744
-
-...... threshold: 0.725
-TPR, sensitivity: 0.834
-FPR             : 0.279
-TNR, specificity: 0.721
-PPV, precision  : 0.676
-ACC             : 0.767
-F1-score        : 0.747
-
-...... threshold: 0.724
-TPR, sensitivity: 0.834
-FPR             : 0.282
-TNR, specificity: 0.718
-PPV, precision  : 0.674
-ACC             : 0.766
-F1-score        : 0.745
-
-...... threshold: 0.724
-TPR, sensitivity: 0.838
-FPR             : 0.282
-TNR, specificity: 0.718
-PPV, precision  : 0.675
-ACC             : 0.767
-F1-score        : 0.748
+...... threshold: 0.721
+TPR, sensitivity: 0.655
+FPR             : 0.095
+TNR, specificity: 0.905
+PPV, precision  : 0.828
+ACC             : 0.802
+F1-score        : 0.732
 
 ...... threshold: 0.718
-TPR, sensitivity: 0.838
-FPR             : 0.294
-TNR, specificity: 0.706
-PPV, precision  : 0.666
-ACC             : 0.76
-F1-score        : 0.742
+TPR, sensitivity: 0.672
+FPR             : 0.095
+TNR, specificity: 0.905
+PPV, precision  : 0.832
+ACC             : 0.809
+F1-score        : 0.744
 
 ...... threshold: 0.717
-TPR, sensitivity: 0.847
-FPR             : 0.294
-TNR, specificity: 0.706
-PPV, precision  : 0.668
-ACC             : 0.764
-F1-score        : 0.747
+TPR, sensitivity: 0.672
+FPR             : 0.101
+TNR, specificity: 0.899
+PPV, precision  : 0.823
+ACC             : 0.806
+F1-score        : 0.74
 
 ...... threshold: 0.716
-TPR, sensitivity: 0.847
-FPR             : 0.297
-TNR, specificity: 0.703
-PPV, precision  : 0.666
-ACC             : 0.762
-F1-score        : 0.745
+TPR, sensitivity: 0.677
+FPR             : 0.101
+TNR, specificity: 0.899
+PPV, precision  : 0.824
+ACC             : 0.808
+F1-score        : 0.743
 
 ...... threshold: 0.716
-TPR, sensitivity: 0.86
-FPR             : 0.297
-TNR, specificity: 0.703
-PPV, precision  : 0.669
-ACC             : 0.767
-F1-score        : 0.752
+TPR, sensitivity: 0.677
+FPR             : 0.104
+TNR, specificity: 0.896
+PPV, precision  : 0.82
+ACC             : 0.806
+F1-score        : 0.741
 
-...... threshold: 0.712
-TPR, sensitivity: 0.86
-FPR             : 0.309
-TNR, specificity: 0.691
-PPV, precision  : 0.66
-ACC             : 0.76
+...... threshold: 0.715
+TPR, sensitivity: 0.685
+FPR             : 0.104
+TNR, specificity: 0.896
+PPV, precision  : 0.821
+ACC             : 0.809
 F1-score        : 0.747
 
-...... threshold: 0.712
-TPR, sensitivity: 0.864
-FPR             : 0.309
-TNR, specificity: 0.691
-PPV, precision  : 0.661
-ACC             : 0.762
-F1-score        : 0.749
+...... threshold: 0.713
+TPR, sensitivity: 0.685
+FPR             : 0.11
+TNR, specificity: 0.89
+PPV, precision  : 0.813
+ACC             : 0.806
+F1-score        : 0.744
 
-...... threshold: 0.71
-TPR, sensitivity: 0.864
-FPR             : 0.315
-TNR, specificity: 0.685
-PPV, precision  : 0.657
-ACC             : 0.759
-F1-score        : 0.746
-
-...... threshold: 0.709
-TPR, sensitivity: 0.872
-FPR             : 0.315
-TNR, specificity: 0.685
-PPV, precision  : 0.659
-ACC             : 0.762
-F1-score        : 0.751
-
-...... threshold: 0.703
-TPR, sensitivity: 0.872
-FPR             : 0.326
-TNR, specificity: 0.674
-PPV, precision  : 0.651
-ACC             : 0.755
-F1-score        : 0.745
-
-...... threshold: 0.701
-TPR, sensitivity: 0.877
-FPR             : 0.326
-TNR, specificity: 0.674
-PPV, precision  : 0.652
-ACC             : 0.757
-F1-score        : 0.748
-
-...... threshold: 0.7
-TPR, sensitivity: 0.877
-FPR             : 0.332
-TNR, specificity: 0.668
-PPV, precision  : 0.648
-ACC             : 0.753
-F1-score        : 0.745
-
-...... threshold: 0.699
-TPR, sensitivity: 0.881
-FPR             : 0.332
-TNR, specificity: 0.668
-PPV, precision  : 0.649
-ACC             : 0.755
+...... threshold: 0.713
+TPR, sensitivity: 0.689
+FPR             : 0.11
+TNR, specificity: 0.89
+PPV, precision  : 0.814
+ACC             : 0.808
 F1-score        : 0.747
 
-...... threshold: 0.699
-TPR, sensitivity: 0.881
-FPR             : 0.335
-TNR, specificity: 0.665
-PPV, precision  : 0.647
-ACC             : 0.753
-F1-score        : 0.746
+...... threshold: 0.713
+TPR, sensitivity: 0.689
+FPR             : 0.113
+TNR, specificity: 0.887
+PPV, precision  : 0.81
+ACC             : 0.806
+F1-score        : 0.745
 
-...... threshold: 0.698
-TPR, sensitivity: 0.894
-FPR             : 0.335
-TNR, specificity: 0.665
-PPV, precision  : 0.65
-ACC             : 0.759
+...... threshold: 0.711
+TPR, sensitivity: 0.702
+FPR             : 0.113
+TNR, specificity: 0.887
+PPV, precision  : 0.813
+ACC             : 0.811
 F1-score        : 0.753
 
-...... threshold: 0.698
-TPR, sensitivity: 0.894
-FPR             : 0.338
-TNR, specificity: 0.662
-PPV, precision  : 0.648
-ACC             : 0.757
-F1-score        : 0.751
-
-...... threshold: 0.697
-TPR, sensitivity: 0.902
-FPR             : 0.338
-TNR, specificity: 0.662
-PPV, precision  : 0.65
-ACC             : 0.76
-F1-score        : 0.756
-
-...... threshold: 0.693
-TPR, sensitivity: 0.902
-FPR             : 0.35
-TNR, specificity: 0.65
-PPV, precision  : 0.642
-ACC             : 0.753
+...... threshold: 0.709
+TPR, sensitivity: 0.702
+FPR             : 0.119
+TNR, specificity: 0.881
+PPV, precision  : 0.805
+ACC             : 0.808
 F1-score        : 0.75
 
+...... threshold: 0.706
+TPR, sensitivity: 0.732
+FPR             : 0.119
+TNR, specificity: 0.881
+PPV, precision  : 0.811
+ACC             : 0.82
+F1-score        : 0.77
+
+...... threshold: 0.705
+TPR, sensitivity: 0.732
+FPR             : 0.128
+TNR, specificity: 0.872
+PPV, precision  : 0.8
+ACC             : 0.815
+F1-score        : 0.764
+
+...... threshold: 0.705
+TPR, sensitivity: 0.736
+FPR             : 0.128
+TNR, specificity: 0.872
+PPV, precision  : 0.801
+ACC             : 0.816
+F1-score        : 0.767
+
+...... threshold: 0.704
+TPR, sensitivity: 0.736
+FPR             : 0.131
+TNR, specificity: 0.869
+PPV, precision  : 0.797
+ACC             : 0.815
+F1-score        : 0.765
+
+...... threshold: 0.703
+TPR, sensitivity: 0.745
+FPR             : 0.131
+TNR, specificity: 0.869
+PPV, precision  : 0.799
+ACC             : 0.818
+F1-score        : 0.771
+
+...... threshold: 0.702
+TPR, sensitivity: 0.745
+FPR             : 0.136
+TNR, specificity: 0.864
+PPV, precision  : 0.792
+ACC             : 0.815
+F1-score        : 0.768
+
+...... threshold: 0.702
+TPR, sensitivity: 0.753
+FPR             : 0.136
+TNR, specificity: 0.864
+PPV, precision  : 0.794
+ACC             : 0.818
+F1-score        : 0.773
+
+...... threshold: 0.701
+TPR, sensitivity: 0.753
+FPR             : 0.139
+TNR, specificity: 0.861
+PPV, precision  : 0.79
+ACC             : 0.816
+F1-score        : 0.771
+
+...... threshold: 0.7
+TPR, sensitivity: 0.757
+FPR             : 0.139
+TNR, specificity: 0.861
+PPV, precision  : 0.791
+ACC             : 0.818
+F1-score        : 0.774
+
+...... threshold: 0.7
+TPR, sensitivity: 0.757
+FPR             : 0.142
+TNR, specificity: 0.858
+PPV, precision  : 0.788
+ACC             : 0.816
+F1-score        : 0.772
+
+...... threshold: 0.7
+TPR, sensitivity: 0.762
+FPR             : 0.142
+TNR, specificity: 0.858
+PPV, precision  : 0.789
+ACC             : 0.818
+F1-score        : 0.775
+
+...... threshold: 0.699
+TPR, sensitivity: 0.762
+FPR             : 0.145
+TNR, specificity: 0.855
+PPV, precision  : 0.785
+ACC             : 0.816
+F1-score        : 0.773
+
+...... threshold: 0.698
+TPR, sensitivity: 0.766
+FPR             : 0.145
+TNR, specificity: 0.855
+PPV, precision  : 0.786
+ACC             : 0.818
+F1-score        : 0.776
+
+...... threshold: 0.698
+TPR, sensitivity: 0.766
+FPR             : 0.148
+TNR, specificity: 0.852
+PPV, precision  : 0.783
+ACC             : 0.816
+F1-score        : 0.774
+
+...... threshold: 0.697
+TPR, sensitivity: 0.77
+FPR             : 0.148
+TNR, specificity: 0.852
+PPV, precision  : 0.784
+ACC             : 0.818
+F1-score        : 0.777
+
+...... threshold: 0.696
+TPR, sensitivity: 0.77
+FPR             : 0.157
+TNR, specificity: 0.843
+PPV, precision  : 0.774
+ACC             : 0.813
+F1-score        : 0.772
+
+...... threshold: 0.696
+TPR, sensitivity: 0.774
+FPR             : 0.157
+TNR, specificity: 0.843
+PPV, precision  : 0.774
+ACC             : 0.815
+F1-score        : 0.774
+
+...... threshold: 0.693
+TPR, sensitivity: 0.774
+FPR             : 0.166
+TNR, specificity: 0.834
+PPV, precision  : 0.765
+ACC             : 0.809
+F1-score        : 0.77
+
+...... threshold: 0.693
+TPR, sensitivity: 0.783
+FPR             : 0.166
+TNR, specificity: 0.834
+PPV, precision  : 0.767
+ACC             : 0.813
+F1-score        : 0.775
+
 ...... threshold: 0.692
+TPR, sensitivity: 0.783
+FPR             : 0.175
+TNR, specificity: 0.825
+PPV, precision  : 0.757
+ACC             : 0.808
+F1-score        : 0.77
+
+...... threshold: 0.691
+TPR, sensitivity: 0.796
+FPR             : 0.175
+TNR, specificity: 0.825
+PPV, precision  : 0.76
+ACC             : 0.813
+F1-score        : 0.778
+
+...... threshold: 0.688
+TPR, sensitivity: 0.796
+FPR             : 0.187
+TNR, specificity: 0.813
+PPV, precision  : 0.748
+ACC             : 0.806
+F1-score        : 0.771
+
+...... threshold: 0.687
+TPR, sensitivity: 0.804
+FPR             : 0.187
+TNR, specificity: 0.813
+PPV, precision  : 0.75
+ACC             : 0.809
+F1-score        : 0.776
+
+...... threshold: 0.685
+TPR, sensitivity: 0.804
+FPR             : 0.196
+TNR, specificity: 0.804
+PPV, precision  : 0.741
+ACC             : 0.804
+F1-score        : 0.771
+
+...... threshold: 0.684
+TPR, sensitivity: 0.809
+FPR             : 0.196
+TNR, specificity: 0.804
+PPV, precision  : 0.742
+ACC             : 0.806
+F1-score        : 0.774
+
+...... threshold: 0.683
+TPR, sensitivity: 0.809
+FPR             : 0.199
+TNR, specificity: 0.801
+PPV, precision  : 0.739
+ACC             : 0.804
+F1-score        : 0.772
+
+...... threshold: 0.683
+TPR, sensitivity: 0.813
+FPR             : 0.199
+TNR, specificity: 0.801
+PPV, precision  : 0.74
+ACC             : 0.806
+F1-score        : 0.775
+
+...... threshold: 0.681
+TPR, sensitivity: 0.813
+FPR             : 0.22
+TNR, specificity: 0.78
+PPV, precision  : 0.721
+ACC             : 0.794
+F1-score        : 0.764
+
+...... threshold: 0.68
+TPR, sensitivity: 0.826
+FPR             : 0.22
+TNR, specificity: 0.78
+PPV, precision  : 0.724
+ACC             : 0.799
+F1-score        : 0.771
+
+...... threshold: 0.673
+TPR, sensitivity: 0.826
+FPR             : 0.258
+TNR, specificity: 0.742
+PPV, precision  : 0.69
+ACC             : 0.776
+F1-score        : 0.752
+
+...... threshold: 0.671
+TPR, sensitivity: 0.838
+FPR             : 0.258
+TNR, specificity: 0.742
+PPV, precision  : 0.694
+ACC             : 0.781
+F1-score        : 0.759
+
+...... threshold: 0.671
+TPR, sensitivity: 0.838
+FPR             : 0.261
+TNR, specificity: 0.739
+PPV, precision  : 0.691
+ACC             : 0.78
+F1-score        : 0.758
+
+...... threshold: 0.67
+TPR, sensitivity: 0.843
+FPR             : 0.261
+TNR, specificity: 0.739
+PPV, precision  : 0.692
+ACC             : 0.781
+F1-score        : 0.76
+
+...... threshold: 0.67
+TPR, sensitivity: 0.843
+FPR             : 0.264
+TNR, specificity: 0.736
+PPV, precision  : 0.69
+ACC             : 0.78
+F1-score        : 0.759
+
+...... threshold: 0.669
+TPR, sensitivity: 0.847
+FPR             : 0.264
+TNR, specificity: 0.736
+PPV, precision  : 0.691
+ACC             : 0.781
+F1-score        : 0.761
+
+...... threshold: 0.669
+TPR, sensitivity: 0.847
+FPR             : 0.267
+TNR, specificity: 0.733
+PPV, precision  : 0.689
+ACC             : 0.78
+F1-score        : 0.76
+
+...... threshold: 0.669
+TPR, sensitivity: 0.855
+FPR             : 0.267
+TNR, specificity: 0.733
+PPV, precision  : 0.691
+ACC             : 0.783
+F1-score        : 0.764
+
+...... threshold: 0.667
+TPR, sensitivity: 0.855
+FPR             : 0.27
+TNR, specificity: 0.73
+PPV, precision  : 0.688
+ACC             : 0.781
+F1-score        : 0.763
+
+...... threshold: 0.665
+TPR, sensitivity: 0.86
+FPR             : 0.27
+TNR, specificity: 0.73
+PPV, precision  : 0.689
+ACC             : 0.783
+F1-score        : 0.765
+
+...... threshold: 0.665
+TPR, sensitivity: 0.86
+FPR             : 0.273
+TNR, specificity: 0.727
+PPV, precision  : 0.687
+ACC             : 0.781
+F1-score        : 0.764
+
+...... threshold: 0.664
+TPR, sensitivity: 0.864
+FPR             : 0.273
+TNR, specificity: 0.727
+PPV, precision  : 0.688
+ACC             : 0.783
+F1-score        : 0.766
+
+...... threshold: 0.663
+TPR, sensitivity: 0.864
+FPR             : 0.279
+TNR, specificity: 0.721
+PPV, precision  : 0.684
+ACC             : 0.78
+F1-score        : 0.763
+
+...... threshold: 0.663
+TPR, sensitivity: 0.868
+FPR             : 0.279
+TNR, specificity: 0.721
+PPV, precision  : 0.685
+ACC             : 0.781
+F1-score        : 0.765
+
+...... threshold: 0.662
+TPR, sensitivity: 0.868
+FPR             : 0.291
+TNR, specificity: 0.709
+PPV, precision  : 0.675
+ACC             : 0.774
+F1-score        : 0.76
+
+...... threshold: 0.661
+TPR, sensitivity: 0.872
+FPR             : 0.291
+TNR, specificity: 0.709
+PPV, precision  : 0.677
+ACC             : 0.776
+F1-score        : 0.762
+
+...... threshold: 0.66
+TPR, sensitivity: 0.872
+FPR             : 0.3
+TNR, specificity: 0.7
+PPV, precision  : 0.67
+ACC             : 0.771
+F1-score        : 0.758
+
+...... threshold: 0.659
+TPR, sensitivity: 0.877
+FPR             : 0.3
+TNR, specificity: 0.7
+PPV, precision  : 0.671
+ACC             : 0.773
+F1-score        : 0.76
+
+...... threshold: 0.659
+TPR, sensitivity: 0.877
+FPR             : 0.303
+TNR, specificity: 0.697
+PPV, precision  : 0.669
+ACC             : 0.771
+F1-score        : 0.759
+
+...... threshold: 0.656
+TPR, sensitivity: 0.894
+FPR             : 0.303
+TNR, specificity: 0.697
+PPV, precision  : 0.673
+ACC             : 0.778
+F1-score        : 0.768
+
+...... threshold: 0.654
+TPR, sensitivity: 0.894
+FPR             : 0.318
+TNR, specificity: 0.682
+PPV, precision  : 0.662
+ACC             : 0.769
+F1-score        : 0.761
+
+...... threshold: 0.654
+TPR, sensitivity: 0.898
+FPR             : 0.318
+TNR, specificity: 0.682
+PPV, precision  : 0.664
+ACC             : 0.771
+F1-score        : 0.763
+
+...... threshold: 0.654
+TPR, sensitivity: 0.898
+FPR             : 0.32
+TNR, specificity: 0.68
+PPV, precision  : 0.661
+ACC             : 0.769
+F1-score        : 0.762
+
+...... threshold: 0.653
+TPR, sensitivity: 0.902
+FPR             : 0.32
+TNR, specificity: 0.68
+PPV, precision  : 0.662
+ACC             : 0.771
+F1-score        : 0.764
+
+...... threshold: 0.649
+TPR, sensitivity: 0.902
+FPR             : 0.344
+TNR, specificity: 0.656
+PPV, precision  : 0.646
+ACC             : 0.757
+F1-score        : 0.753
+
+...... threshold: 0.648
+TPR, sensitivity: 0.906
+FPR             : 0.344
+TNR, specificity: 0.656
+PPV, precision  : 0.647
+ACC             : 0.759
+F1-score        : 0.755
+
+...... threshold: 0.647
 TPR, sensitivity: 0.906
 FPR             : 0.35
 TNR, specificity: 0.65
@@ -1080,15 +936,15 @@ PPV, precision  : 0.644
 ACC             : 0.755
 F1-score        : 0.753
 
-...... threshold: 0.691
-TPR, sensitivity: 0.906
-FPR             : 0.353
-TNR, specificity: 0.647
-PPV, precision  : 0.642
-ACC             : 0.753
-F1-score        : 0.751
+...... threshold: 0.647
+TPR, sensitivity: 0.911
+FPR             : 0.35
+TNR, specificity: 0.65
+PPV, precision  : 0.645
+ACC             : 0.757
+F1-score        : 0.755
 
-...... threshold: 0.691
+...... threshold: 0.647
 TPR, sensitivity: 0.911
 FPR             : 0.353
 TNR, specificity: 0.647
@@ -1096,279 +952,239 @@ PPV, precision  : 0.643
 ACC             : 0.755
 F1-score        : 0.754
 
-...... threshold: 0.69
-TPR, sensitivity: 0.911
-FPR             : 0.356
-TNR, specificity: 0.644
-PPV, precision  : 0.641
-ACC             : 0.753
-F1-score        : 0.752
-
-...... threshold: 0.689
-TPR, sensitivity: 0.919
-FPR             : 0.356
-TNR, specificity: 0.644
-PPV, precision  : 0.643
+...... threshold: 0.646
+TPR, sensitivity: 0.915
+FPR             : 0.353
+TNR, specificity: 0.647
+PPV, precision  : 0.644
 ACC             : 0.757
-F1-score        : 0.757
-
-...... threshold: 0.687
-TPR, sensitivity: 0.919
-FPR             : 0.365
-TNR, specificity: 0.635
-PPV, precision  : 0.637
-ACC             : 0.752
-F1-score        : 0.753
-
-...... threshold: 0.687
-TPR, sensitivity: 0.923
-FPR             : 0.365
-TNR, specificity: 0.635
-PPV, precision  : 0.638
-ACC             : 0.753
-F1-score        : 0.755
-
-...... threshold: 0.686
-TPR, sensitivity: 0.923
-FPR             : 0.368
-TNR, specificity: 0.632
-PPV, precision  : 0.636
-ACC             : 0.752
-F1-score        : 0.753
-
-...... threshold: 0.685
-TPR, sensitivity: 0.928
-FPR             : 0.368
-TNR, specificity: 0.632
-PPV, precision  : 0.637
-ACC             : 0.753
 F1-score        : 0.756
 
-...... threshold: 0.683
-TPR, sensitivity: 0.928
-FPR             : 0.377
-TNR, specificity: 0.623
-PPV, precision  : 0.632
-ACC             : 0.748
-F1-score        : 0.752
+...... threshold: 0.645
+TPR, sensitivity: 0.915
+FPR             : 0.359
+TNR, specificity: 0.641
+PPV, precision  : 0.64
+ACC             : 0.753
+F1-score        : 0.753
 
-...... threshold: 0.683
-TPR, sensitivity: 0.932
-FPR             : 0.377
-TNR, specificity: 0.623
-PPV, precision  : 0.633
-ACC             : 0.75
+...... threshold: 0.645
+TPR, sensitivity: 0.919
+FPR             : 0.359
+TNR, specificity: 0.641
+PPV, precision  : 0.641
+ACC             : 0.755
+F1-score        : 0.755
+
+...... threshold: 0.645
+TPR, sensitivity: 0.919
+FPR             : 0.362
+TNR, specificity: 0.638
+PPV, precision  : 0.639
+ACC             : 0.753
 F1-score        : 0.754
 
-...... threshold: 0.681
-TPR, sensitivity: 0.932
-FPR             : 0.383
-TNR, specificity: 0.617
-PPV, precision  : 0.629
-ACC             : 0.747
-F1-score        : 0.751
+...... threshold: 0.644
+TPR, sensitivity: 0.923
+FPR             : 0.362
+TNR, specificity: 0.638
+PPV, precision  : 0.64
+ACC             : 0.755
+F1-score        : 0.756
 
-...... threshold: 0.679
-TPR, sensitivity: 0.94
+...... threshold: 0.639
+TPR, sensitivity: 0.923
 FPR             : 0.383
 TNR, specificity: 0.617
+PPV, precision  : 0.627
+ACC             : 0.743
+F1-score        : 0.747
+
+...... threshold: 0.636
+TPR, sensitivity: 0.945
+FPR             : 0.383
+TNR, specificity: 0.617
+PPV, precision  : 0.632
+ACC             : 0.752
+F1-score        : 0.758
+
+...... threshold: 0.636
+TPR, sensitivity: 0.945
+FPR             : 0.386
+TNR, specificity: 0.614
 PPV, precision  : 0.631
 ACC             : 0.75
 F1-score        : 0.756
 
-...... threshold: 0.678
-TPR, sensitivity: 0.94
+...... threshold: 0.634
+TPR, sensitivity: 0.957
 FPR             : 0.386
 TNR, specificity: 0.614
-PPV, precision  : 0.63
-ACC             : 0.748
-F1-score        : 0.754
+PPV, precision  : 0.634
+ACC             : 0.755
+F1-score        : 0.763
 
-...... threshold: 0.677
-TPR, sensitivity: 0.949
-FPR             : 0.386
-TNR, specificity: 0.614
+...... threshold: 0.633
+TPR, sensitivity: 0.957
+FPR             : 0.389
+TNR, specificity: 0.611
 PPV, precision  : 0.632
-ACC             : 0.752
-F1-score        : 0.759
+ACC             : 0.753
+F1-score        : 0.761
 
-...... threshold: 0.675
-TPR, sensitivity: 0.949
-FPR             : 0.398
-TNR, specificity: 0.602
-PPV, precision  : 0.625
-ACC             : 0.745
-F1-score        : 0.753
+...... threshold: 0.632
+TPR, sensitivity: 0.962
+FPR             : 0.389
+TNR, specificity: 0.611
+PPV, precision  : 0.633
+ACC             : 0.755
+F1-score        : 0.764
 
-...... threshold: 0.675
-TPR, sensitivity: 0.953
-FPR             : 0.398
-TNR, specificity: 0.602
-PPV, precision  : 0.626
-ACC             : 0.747
-F1-score        : 0.755
-
-...... threshold: 0.674
-TPR, sensitivity: 0.953
-FPR             : 0.404
-TNR, specificity: 0.596
-PPV, precision  : 0.622
-ACC             : 0.743
-F1-score        : 0.753
-
-...... threshold: 0.674
-TPR, sensitivity: 0.957
-FPR             : 0.404
-TNR, specificity: 0.596
-PPV, precision  : 0.623
-ACC             : 0.745
-F1-score        : 0.755
-
-...... threshold: 0.674
-TPR, sensitivity: 0.957
-FPR             : 0.409
-TNR, specificity: 0.591
-PPV, precision  : 0.62
+...... threshold: 0.628
+TPR, sensitivity: 0.962
+FPR             : 0.412
+TNR, specificity: 0.588
+PPV, precision  : 0.619
 ACC             : 0.741
 F1-score        : 0.753
 
-...... threshold: 0.673
+...... threshold: 0.627
 TPR, sensitivity: 0.966
-FPR             : 0.409
-TNR, specificity: 0.591
-PPV, precision  : 0.622
-ACC             : 0.745
-F1-score        : 0.757
-
-...... threshold: 0.671
-TPR, sensitivity: 0.966
-FPR             : 0.421
-TNR, specificity: 0.579
-PPV, precision  : 0.615
-ACC             : 0.738
-F1-score        : 0.752
-
-...... threshold: 0.671
-TPR, sensitivity: 0.97
-FPR             : 0.421
-TNR, specificity: 0.579
-PPV, precision  : 0.616
-ACC             : 0.74
-F1-score        : 0.754
-
-...... threshold: 0.67
-TPR, sensitivity: 0.97
-FPR             : 0.424
-TNR, specificity: 0.576
-PPV, precision  : 0.615
-ACC             : 0.738
-F1-score        : 0.752
-
-...... threshold: 0.67
-TPR, sensitivity: 0.974
-FPR             : 0.424
-TNR, specificity: 0.576
-PPV, precision  : 0.616
-ACC             : 0.74
+FPR             : 0.412
+TNR, specificity: 0.588
+PPV, precision  : 0.62
+ACC             : 0.743
 F1-score        : 0.755
 
-...... threshold: 0.663
+...... threshold: 0.627
+TPR, sensitivity: 0.966
+FPR             : 0.415
+TNR, specificity: 0.585
+PPV, precision  : 0.619
+ACC             : 0.741
+F1-score        : 0.754
+
+...... threshold: 0.626
+TPR, sensitivity: 0.97
+FPR             : 0.415
+TNR, specificity: 0.585
+PPV, precision  : 0.62
+ACC             : 0.743
+F1-score        : 0.756
+
+...... threshold: 0.619
+TPR, sensitivity: 0.97
+FPR             : 0.445
+TNR, specificity: 0.555
+PPV, precision  : 0.603
+ACC             : 0.726
+F1-score        : 0.744
+
+...... threshold: 0.619
 TPR, sensitivity: 0.974
-FPR             : 0.442
-TNR, specificity: 0.558
-PPV, precision  : 0.606
-ACC             : 0.729
-F1-score        : 0.747
-
-...... threshold: 0.662
-TPR, sensitivity: 0.979
-FPR             : 0.442
-TNR, specificity: 0.558
-PPV, precision  : 0.607
-ACC             : 0.731
-F1-score        : 0.749
-
-...... threshold: 0.66
-TPR, sensitivity: 0.979
-FPR             : 0.451
-TNR, specificity: 0.549
-PPV, precision  : 0.602
-ACC             : 0.726
+FPR             : 0.445
+TNR, specificity: 0.555
+PPV, precision  : 0.604
+ACC             : 0.727
 F1-score        : 0.746
 
-...... threshold: 0.66
-TPR, sensitivity: 0.983
-FPR             : 0.451
-TNR, specificity: 0.549
-PPV, precision  : 0.603
-ACC             : 0.727
-F1-score        : 0.748
-
-...... threshold: 0.66
-TPR, sensitivity: 0.983
+...... threshold: 0.616
+TPR, sensitivity: 0.974
 FPR             : 0.454
 TNR, specificity: 0.546
-PPV, precision  : 0.602
-ACC             : 0.726
-F1-score        : 0.746
-
-...... threshold: 0.66
-TPR, sensitivity: 0.987
-FPR             : 0.454
-TNR, specificity: 0.546
-PPV, precision  : 0.603
-ACC             : 0.727
-F1-score        : 0.748
-
-...... threshold: 0.657
-TPR, sensitivity: 0.987
-FPR             : 0.46
-TNR, specificity: 0.54
 PPV, precision  : 0.599
+ACC             : 0.722
+F1-score        : 0.742
+
+...... threshold: 0.615
+TPR, sensitivity: 0.979
+FPR             : 0.454
+TNR, specificity: 0.546
+PPV, precision  : 0.601
 ACC             : 0.724
+F1-score        : 0.744
+
+...... threshold: 0.615
+TPR, sensitivity: 0.979
+FPR             : 0.457
+TNR, specificity: 0.543
+PPV, precision  : 0.599
+ACC             : 0.722
+F1-score        : 0.743
+
+...... threshold: 0.614
+TPR, sensitivity: 0.983
+FPR             : 0.457
+TNR, specificity: 0.543
+PPV, precision  : 0.6
+ACC             : 0.724
+F1-score        : 0.745
+
+...... threshold: 0.612
+TPR, sensitivity: 0.983
+FPR             : 0.463
+TNR, specificity: 0.537
+PPV, precision  : 0.597
+ACC             : 0.72
+F1-score        : 0.743
+
+...... threshold: 0.612
+TPR, sensitivity: 0.987
+FPR             : 0.463
+TNR, specificity: 0.537
+PPV, precision  : 0.598
+ACC             : 0.722
+F1-score        : 0.745
+
+...... threshold: 0.611
+TPR, sensitivity: 0.987
+FPR             : 0.466
+TNR, specificity: 0.534
+PPV, precision  : 0.596
+ACC             : 0.72
+F1-score        : 0.744
+
+...... threshold: 0.611
+TPR, sensitivity: 0.991
+FPR             : 0.466
+TNR, specificity: 0.534
+PPV, precision  : 0.597
+ACC             : 0.722
 F1-score        : 0.746
 
-...... threshold: 0.657
+...... threshold: 0.607
 TPR, sensitivity: 0.991
-FPR             : 0.46
-TNR, specificity: 0.54
-PPV, precision  : 0.601
-ACC             : 0.726
-F1-score        : 0.748
+FPR             : 0.487
+TNR, specificity: 0.513
+PPV, precision  : 0.587
+ACC             : 0.71
+F1-score        : 0.737
 
-...... threshold: 0.638
-TPR, sensitivity: 0.991
-FPR             : 0.537
-TNR, specificity: 0.463
-PPV, precision  : 0.563
-ACC             : 0.68
-F1-score        : 0.718
-
-...... threshold: 0.638
+...... threshold: 0.607
 TPR, sensitivity: 0.996
-FPR             : 0.537
-TNR, specificity: 0.463
-PPV, precision  : 0.564
-ACC             : 0.682
-F1-score        : 0.72
+FPR             : 0.487
+TNR, specificity: 0.513
+PPV, precision  : 0.588
+ACC             : 0.712
+F1-score        : 0.739
 
-...... threshold: 0.599
+...... threshold: 0.586
 TPR, sensitivity: 0.996
-FPR             : 0.647
-TNR, specificity: 0.353
-PPV, precision  : 0.518
-ACC             : 0.617
-F1-score        : 0.681
+FPR             : 0.546
+TNR, specificity: 0.454
+PPV, precision  : 0.56
+ACC             : 0.677
+F1-score        : 0.717
 
-...... threshold: 0.599
+...... threshold: 0.585
 TPR, sensitivity: 1.0
-FPR             : 0.647
-TNR, specificity: 0.353
-PPV, precision  : 0.519
-ACC             : 0.619
-F1-score        : 0.683
+FPR             : 0.546
+TNR, specificity: 0.454
+PPV, precision  : 0.561
+ACC             : 0.678
+F1-score        : 0.719
 
-...... threshold: 0.411
+...... threshold: 0.409
 TPR, sensitivity: 1.0
 FPR             : 1.0
 TNR, specificity: 0.0

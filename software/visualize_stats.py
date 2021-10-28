@@ -1,9 +1,9 @@
 # python3 visualize_stats.py cpbd/output/
-import sys
 import re
+import sys
 import matplotlib.pyplot as plt
 
-path = sys.argv[1]
+path = str(sys.argv[1])
 
 if('laplacian_variance/output/' in path):
     title = "Laplacian Variance metric"
@@ -23,7 +23,7 @@ elif('merge_metrics/cpbd_HF/' in path):
 elif('merge_metrics/HF_lv' in path):
     title = 'Merge of Histogram Frequency-based and Laplacian Variance'
     name  = 'hf_lv'
-elif('merge_metrics/cpbd_HF_lv' in path):
+elif('cpbd_HF_lv' in path):
     title = 'Merge of CPBD, HF and Laplacian Variance'
     name  = 'cpbd_hf_lv'
 

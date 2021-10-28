@@ -15,7 +15,7 @@ from blur_detection import fix_image_size
 from blur_detection import pretty_blur_map
 
 import time # added
-
+import re
 
 def parse_args():
     parser = argparse.ArgumentParser(description='run blur detection on a single image')
@@ -74,7 +74,11 @@ if __name__ == '__main__':
     else:
         file_object = open('laplacian_variance/output/time.txt', 'a') # added
 
-    for image_path in find_images(args.images):
+    # for image_path in find_images(args.images):
+    ims = []                            # added
+    for q in find_images(args.images):  #
+        ims.append(str(q))              #
+    for image_path in sorted(ims):      #
         image = cv2.imread(str(image_path))
         if image is None:
             logging.warning(f'warning! failed to read image from {image_path}; skipping!')

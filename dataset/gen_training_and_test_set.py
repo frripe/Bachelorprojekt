@@ -1,5 +1,5 @@
 # run from software:
-# python3 gen_training_and_test_set.py 0.1
+# python3 ../dataset/gen_training_and_test_set.py 0.1
 import os
 import shutil
 import random
@@ -10,7 +10,6 @@ from sys import argv
 percent = float(argv[1])
 types = ['jpg', 'png', 'bmp']
 paths = os.listdir('../dataset/original/jpg/')
-#paths = ['Blurry/', 'NoProblems/', 'synth_blurry/', 'synth_no_problems/']
 random.seed(a=1)
 shutil.rmtree('../dataset/test/')
 shutil.rmtree('../dataset/training/')
@@ -32,30 +31,33 @@ def move(percent):
         for t in types:
 
             for im in tests:
-                src_path = '../dataset/original/' + t + '/' + path + '/' + str(im) + '.' + t
+                src_path = '../dataset/original/' + t + '/' + path + '/' + str(im).zfill(4) + '.' + t
                 dst_path = '../dataset/test/' + t + '/' + path + '/'
+                new_path = t + '/' + path + '_no_outlier/'
                 if not os.path.exists(dst_path):
                     os.makedirs(dst_path, exist_ok=True)
-                shutil.copy2(src_path, dst_path + str(im) + '.' + t)
+                shutil.copy2(src_path, dst_path + str(im).zfill(4) + '.' + t)
+                # set without img 33
+                if path in ['NoProblems', 'synth_no_problems']:
+                    if not os.path.exists('../dataset/test/' + new_path):
+                        os.makedirs('../dataset/test/' + new_path, exist_ok=True)
+                    if im%34 != 33:
+                        shutil.copy2(src_path, '../dataset/test/' + new_path + str(im).zfill(4) + '.' + t)
 
             for im in trainings:
-                src_path = '../dataset/original/' + t + '/' + path + '/' + str(im) + '.' + t
+                src_path = '../dataset/original/' + t + '/' + path + '/' + str(im).zfill(4) + '.' + t
                 dst_path = '../dataset/training/' + t + '/' + path + '/'
+                new_path = t + '/' + path + '_no_outlier/'
                 if not os.path.exists(dst_path):
                     os.makedirs(dst_path, exist_ok=True)
-                shutil.copy2(src_path, dst_path + str(im) + '.' + t)
-
-            # set without img 33 for variance of laplacian
-            if t == 'png' and path in ['NoProblems', 'synth_no_problems']:
-                for im in range(1, n+1):
-                    src_path = '../dataset/original/' + t + '/' + path + '/' + str(im) + '.' + t
-                    copy_path = t + '/' + path + '_copy/'
-                    if not os.path.exists('../dataset/training/' + copy_path):
-                        os.makedirs('../dataset/training/' + copy_path, exist_ok=True)
-                    if not os.path.exists('../dataset/test/' + copy_path):
-                        os.makedirs('../dataset/test/' + copy_path, exist_ok=True)
+                shutil.copy2(src_path, dst_path + str(im).zfill(4) + '.' + t)
+                # set without img 33
+                if path in ['NoProblems', 'synth_no_problems']:
+                    if not os.path.exists('../dataset/training/' + new_path):
+                        os.makedirs('../dataset/training/' + new_path, exist_ok=True)
                     if im%34 != 33:
-                        shutil.copy2(src_path, '../dataset/training/' + copy_path + str(im) + '.' + t)
-                        shutil.copy2(src_path, '../dataset/test/' + copy_path + str(im) + '.' + t)
+                        shutil.copy2(src_path, '../dataset/training/' + new_path + str(im).zfill(4) + '.' + t)
+
+
 
 move(percent)
