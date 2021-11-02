@@ -1,0 +1,11 @@
+    AUC-scores
+cpbd-hf-lv: 90
+cpbd-lv:    89
+cpbd-hf:    87
+hf-lv:      86
+lv:         85
+hf:         81
+cpbd:       78
+fm: 100-36= 64
+
+
