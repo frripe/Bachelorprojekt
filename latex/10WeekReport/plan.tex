@@ -1,0 +1,32 @@
+\subsection*{Overall Project Plan}
+\hspace{-4.3cm}
+\begin{gantt}{19}{12}
+    \begin{ganttitle}
+        \titleelement{September}{5}
+        \titleelement{October}{4}
+        \titleelement{November}{3}
+    \end{ganttitle}
+    \begin{ganttitle}
+        \numtitle{1}{1}{12}{1}
+    \end{ganttitle}
+    \ganttbar{\textbf{Activity $|$ (Risk)}}{0}{0}
+    \ganttbar[pattern=crosshatch, color=green]{Write introduction and project plan $|$ (1)}{0}{2}
+    \ganttbar[pattern=crosshatch, color=green]{Select sharpness-metrics to include $|$ (2)}{2}{2}
+    
+    \ganttbar[pattern=crosshatch, color=orange]{Find, run and train code, test it + write $|$ (3)}{3}{6}
+    \ganttbar[pattern=crosshatch, color=green]{Find code and make sure it is running $|$ (2)}{3}{1}
+    \ganttbarcon[pattern=crosshatch, color=green]{Gen synth dataset, roc-curves \& conf-matrices $|$ (2)}{4}{1}
+    \ganttmilestone[color=red]{Hand in project plan}{4.5}
+    \ganttbar[pattern=crosshatch, color=green]{Write test theory + describe metrics + $O(n)$ $|$ (2)}{5}{1}
+    \ganttcon{5}{7}{5}{9}
+    \ganttbarcon[pattern=crosshatch, color=green]{Gen training and test dataset + tweak constants $|$ (2)}{6}{1}
+    \ganttbarcon[pattern=crosshatch, color=orange]{Merge metrics, correct data set, choose threshold $|$ (2)}{7}{2}
+
+    \ganttbar{Implement and test program with GUI + write $|$ (2)}{9}{3}
+    \ganttbar{Research on active contours + write $|$ (2)}{9}{1}
+    \ganttbarcon{Implement and test active contours + write $|$ (3)}{10}{1}
+    \ganttbar{Research to find a solution to earwax + write $|$ (2)}{10}{1}
+    \ganttbarcon{Implement and test earwax-solution + write $|$ (3)}{11}{1}
+    \ganttbar{Read through + small corrections $|$ (1)}{10}{2}
+    \ganttmilestone[color=red]{Hand in project}{12}
+\end{gantt}

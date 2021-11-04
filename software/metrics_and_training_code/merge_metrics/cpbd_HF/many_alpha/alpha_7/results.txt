@@ -1,6 +1,6 @@
 time            : 0.881144175098427
-AUC             : 0.7949302354946651
 Merge of CPBD and Histogram Frequency-based
+AUC             : 0.7949302354946651
 
 ...... threshold: 1.5563544808837655
 TPR, sensitivity: 0.0

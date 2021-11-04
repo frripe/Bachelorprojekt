@@ -40,7 +40,7 @@ def _find_thresh_multiple(fpr):
         'metrics_and_training_code/merge_metrics/cpbd_lv_jpg/many_alpha/alpha_4/',
         'metrics_and_training_code/merge_metrics/cpbd_HF/many_alpha/alpha_2/',
         'metrics_and_training_code/merge_metrics/HF_lv_jpg/many_alpha/alpha_7/',
-        'metrics_and_training_code/merge_metrics/cpbd_HF_lv_jpg/many_alpha/alpha_4_1/',
+        'metrics_and_training_code/merge_metrics/cpbd_HF_lv_jpg/many_alpha/alpha_2_6/',
     ]:
         threshold_new, f1_new = _find_thresh(fpr, name)
         if f1_new > f1:

@@ -24,9 +24,11 @@ def open_scores(path, file_name):
 def comp_scores(scores1, scores2, scores3):
     a = alpha/10
     b = beta/10
+    # print('aplha: ', str(a))
+    # print('beta: ', str(b))
     scores = []
     for s1, s2, s3 in zip(scores1, scores2, scores3):
-        scores.append((a*s1 + beta*s2 + (1-a-b)*s3))
+        scores.append((a*s1 + b*s2 + (1-a-b)*s3))
     return scores
 
 def comp_times(times1, times2, times3):

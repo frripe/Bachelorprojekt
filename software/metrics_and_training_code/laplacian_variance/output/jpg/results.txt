@@ -1,6 +1,6 @@
-time            : 0.5021193635912696
-AUC             : 0.8479954542584759
+time            : 0.5018032111159159
 Laplacian Variance metric
+AUC             : 0.8479954542584759
 
 ...... threshold: 2.165877214957221
 TPR, sensitivity: 0.0

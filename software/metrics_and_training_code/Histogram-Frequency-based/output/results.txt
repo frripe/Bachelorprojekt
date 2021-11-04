@@ -1,6 +1,6 @@
 time            : 0.0004126325903151419
-AUC             : 0.8052717974619609
 Histogram Frequency-based metric
+AUC             : 0.8052717974619609
 
 ...... threshold: 1.343023
 TPR, sensitivity: 0.0

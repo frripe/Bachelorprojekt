@@ -14,17 +14,43 @@ def open_data(path, filename):
         data = [float(i) for i in data.split()]
     return data
 
+def retrieve_metric_name(path):
+    if("laplacian_variance/" in path):
+        title = "Laplacian Variance metric"
+        name  = 'lv'
+    elif("Histogram-Frequency-based/" in path):
+        title = "Histogram Frequency-based metric"
+        name  = 'hf'
+    elif("FM/" in path):
+        title = "Frequency Domain metric"
+        name  = 'fm'
+    elif("cpbd/" in path):
+        title = "CPBD metric"
+        name  = 'cpbd'
+    elif('merge_metrics/cpbd_lv' in path):
+        title = 'Merge of CPBD and Laplacian Variance'
+        name  = 'cpbd_lv'
+    elif('merge_metrics/cpbd_HF/' in path):
+        title = 'Merge of CPBD and Histogram Frequency-based'
+        name  = 'cpbd_hf'
+    elif('merge_metrics/HF_lv' in path):
+        title = 'Merge of Histogram Frequency-based and Laplacian Variance'
+        name  = 'hf_lv'
+    elif('cpbd_HF_lv' in path):
+        title = 'Merge of CPBD, HF and Laplacian Variance'
+        name  = 'cpbd_hf_lv'
+    return title, name
+
 def plot_density(path, title, name):
     plt.clf()
     n_bins = 20
 
-    # yblurry = list(filter(lambda x: x < 1.4, blurry))
     (mu, sigma) = norm.fit(blurry)
     n, bins, patches = plt.hist(blurry, bins=n_bins, density=True, alpha=0.6, stacked=True, color="blue", label="Hist of Blurry")
     plt.plot(bins, norm.pdf( bins, mu, sigma), '-', linewidth=2, color='orange', label='Norm. approx. of Blurry')
-    # ysharp=list(filter(lambda x: x  < 1.4, sharp))
     (mu, sigma) = norm.fit(sharp)
     n, bins, patches = plt.hist(sharp, bins=n_bins, density=True, alpha=0.6, stacked=True, color='green', label='Hist of No problems')
+
     plt.plot(bins, norm.pdf( bins, mu, sigma), '-', linewidth=2, color='red', label='Norm. approx. of No Problems')
     plt.xlabel('Metric score output')
     plt.ylabel('Density')
@@ -33,15 +59,19 @@ def plot_density(path, title, name):
     plt.savefig(path + 'output_dens_' + name + '.png')
     plt.savefig('results/density/' + name + '/output_dens_' + name + p_name + '.png')
 
-def plot_conf(y_true, y_pred, threshold):
+def plot_conf(y_true, y_pred, threshold, fpr, quick, save=2):
     conf_matrix = metrics.confusion_matrix(y_true, y_pred)
     disp = metrics.ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=['blur', 'sharp'])
     disp.plot()
-    plt.show()
+    if save==1:
+        ...
+    #     plt.savefig(path + str(round(threshold, 3)) + '_output_conf_mat_' + name + '.png')
+    #     plt.savefig('results/conf/' + name + '/output_conf_' + name + p_name + '.png')
+    elif save==2:
+        plt.savefig('test_results/quick_' + str(quick) + '_fpr_' + str(fpr) + '_threshold_' + str(round(threshold, 4)) + '_conf_mat.png')
+    elif save ==3:
+        plt.show()
     plt.close()
-# #    plt.savefig(path + 'many_conf' + str(round(threshold, 3)) + '_output_conf_mat_' + name + '.png')
-#     plt.savefig(path + str(round(threshold, 3)) + '_output_conf_mat_' + name + '.png')
-#     plt.savefig('results/conf/' + name + '/output_conf_' + name + p_name + '.png')
     return conf_matrix.ravel()
 
 def plot_roc(path, title, name, y_true, y_score):
@@ -59,16 +89,18 @@ def plot_roc(path, title, name, y_true, y_score):
     plt.savefig('results/roc/' + name + '/output_roc_' + name + p_name + '.png')
     return fpr, tpr, threshold
 
-def plot_box(path, title, name, sharp, blurry, gauss2, gauss3, gauss4, save=1):
+def plot_box(path, title, name, sharp, blurry, gauss2, gauss3, gauss4, fpr=0, save=1, quick=0):
     plt.clf()
     plt.boxplot([sharp, blurry, gauss2, gauss3, gauss4], labels=['sharp', 'blurry', 'gauss2', 'gauss3', 'gauss4'])
     plt.title(title)
-    if save:
+    if save==1:
         plt.savefig(path + 'output_boxplot_' + name)
         plt.savefig('results/box/' + name + '/output_box_' + name + p_name + '.png')
-    else:
+    elif save==2:
+        plt.savefig('test_results/quick_' + str(quick) + '_fpr_' + str(fpr) + '_box.png')
+    elif save==3:
         plt.show()
-        plt.close()
+    plt.close()
 
 def init_y(blurry, sharp):
     y_true = np.array([0]*len(blurry) + [1]*len(sharp)) # blur is negative, sharp is positive
@@ -98,31 +130,7 @@ if __name__ == "__main__":
         avg_time = sum(times)/len(times)
         print("time            : " + str(avg_time))
 
-    if("laplacian_variance/output/" in path):
-        title = "Laplacian Variance metric"
-        name  = 'lv'
-    elif("Histogram-Frequency-based/output/" in path):
-        title = "Histogram Frequency-based metric"
-        name  = 'hf'
-    elif("FM/output/" in path):
-        title = "Frequency Domain metric"
-        name  = 'fm'
-    elif("cpbd/output/" in path):
-        title = "CPBD metric"
-        name  = 'cpbd'
-    elif('merge_metrics/cpbd_lv' in path):
-        title = 'Merge of CPBD and Laplacian Variance'
-        name  = 'cpbd_lv'
-    elif('merge_metrics/cpbd_HF/' in path):
-        title = 'Merge of CPBD and Histogram Frequency-based'
-        name  = 'cpbd_hf'
-    elif('merge_metrics/HF_lv' in path):
-        title = 'Merge of Histogram Frequency-based and Laplacian Variance'
-        name  = 'hf_lv'
-    elif('cpbd_HF_lv' in path):
-        title = 'Merge of CPBD, HF and Laplacian Variance'
-        name  = 'cpbd_hf_lv'
-
+    title, name = retrieve_metric_name(path)
     print(title)
 
     blurry = open_data(path, 'out_blurry.txt')

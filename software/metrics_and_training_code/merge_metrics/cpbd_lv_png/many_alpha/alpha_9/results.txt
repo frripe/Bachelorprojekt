@@ -1,6 +1,6 @@
-time            : 1.262017259590448
-AUC             : 0.8074499652755855
+time            : 1.2613236521069293
 Merge of CPBD and Laplacian Variance
+AUC             : 0.8074499652755855
 
 ...... threshold: 1.6917840346207322
 TPR, sensitivity: 0.0

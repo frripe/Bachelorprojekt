@@ -1,6 +1,6 @@
 time            : 0.06358308410937744
-AUC             : 0.362592335374708
 Frequency Domain metric
+AUC             : 0.362592335374708
 
 ...... threshold: 1.0650540607539902
 TPR, sensitivity: 0.0

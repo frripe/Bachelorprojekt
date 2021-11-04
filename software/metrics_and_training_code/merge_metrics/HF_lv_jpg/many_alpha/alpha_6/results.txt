@@ -1,6 +1,6 @@
 time            : 0.5025319961815848
-AUC             : 0.8554706736536397
 Merge of Histogram Frequency-based and Laplacian Variance
+AUC             : 0.8554706736536397
 
 ...... threshold: 1.6716743210529217
 TPR, sensitivity: 0.0
