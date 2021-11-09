@@ -56,7 +56,7 @@ def _find_thresh(fpr, path):
     threshold_index = F1_slice.index(F1_highest)
     return threshold[threshold_index], F1_highest
 
-def find_threshold(fpr=0.1, quick=0):
+def find_threshold(fpr=0.1, quick=False):
     if quick:
         return _find_thresh(fpr, 'metrics_and_training_code/Histogram-Frequency-based/output/')[0], 'metrics_and_training_code/Histogram-Frequency-based/output/'
     return _find_thresh_multiple(fpr)

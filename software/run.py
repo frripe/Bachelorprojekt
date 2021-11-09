@@ -3,11 +3,11 @@
 
 import sys
 import argparse
-import cv2
 
 from choose_threshold import find_threshold
 from compute_scores import compute_scores
 from compute_scores import compute_score
+from webcam_app import run_webcam_application
 
 from metrics_and_training_code.visualize_output import retrieve_metric_name
 from metrics_and_training_code.visualize_output import plot_box
@@ -19,14 +19,10 @@ def _parse_args():
     parser = argparse.ArgumentParser(description='run blur detection on test images')
     parser.add_argument('-i', '--image_path', type=str, nargs='+', help='directory of images')
     parser.add_argument('-f', '--fpr', type=float, default=0.1, help='tolerable FPR, default 10%')
-    parser.add_argument('-q', '--quick', type=int, help='use the fastest metric instead of the most accurate')
+    parser.add_argument('-q', '--quick', action='store_true', help='use the fastest metric instead of the most accurate')
     parser.add_argument('-t', '--test', action='store_true', help='run on test data set and plot output')
     # parser.set_defaults(test='spam')
     return parser.parse_args()
-
-
-def _is_sharp(threshold, score):
-    print('blurry') if bool(score < threshold) else print('sharp')
 
 def _plot_output(threshold, scores, metric, fpr, quick, path=0):
     blurry = scores['Blurry'] + scores['synth_blurry']
@@ -41,7 +37,7 @@ def _plot_output(threshold, scores, metric, fpr, quick, path=0):
         plot_conf(y_true, y_pred, threshold, fpr, quick, 2)
 
 if __name__ == '__main__':
-    assert sys.version_info >= (3, 6), sys.version_info
+    # assert sys.version_info >= (3, 6), sys.version_info
     args = _parse_args()
     threshold, metric = find_threshold(args.fpr, args.quick)
     print('threshold ' + str(threshold))
@@ -68,10 +64,5 @@ if __name__ == '__main__':
                 scores = compute_scores(metric, test_data)
             print(scores)
             _plot_output(threshold, scores, metric, args.fpr, args.quick)
-    # else:
-    #     # TODO: run on input image from webcam
-    #     while(1):
-    #         if args.quick:
-    #             _is_sharp(threshold, compute_score(hf, ...))
-    #         else:
-    #             _is_sharp(threshold, compute_score(metric, ...))
+    else: # run on input image from webcam
+        run_webcam_application(args.quick, args.fpr, threshold, metric)

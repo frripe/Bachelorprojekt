@@ -5,14 +5,6 @@ import os
 path = '../dataset/original/'
 print([name for name in os.listdir(path + 'jpg/') if os.path.isdir(path + 'jpg/' + name)])
 
-# for foldername in [name for name in os.listdir(path + 'jpg/') if os.path.isdir(path + 'jpg/' + name)]:
-#     n = len(os.listdir(path + 'jpg/' + foldername + '/'))
-#     print(foldername, n)
-#     for n in range(1, n+1):
-#         os.rename(path + 'jpg/' + foldername + '/' + str(n) + '.jpg', path + 'jpg/' + foldername + '/' + str(n).zfill(4) + '.jpg')
-#         os.rename(path + 'png/' + foldername + '/' + str(n) + '.png', path + 'png/' + foldername + '/' + str(n).zfill(4) + '.png')
-#         os.rename(path + 'bmp/' + foldername + '/' + str(n) + '.bmp', path + 'bmp/' + foldername + '/' + str(n).zfill(4) + '.bmp')
-
 for foldername in [name for name in os.listdir(path + 'jpg/') if os.path.isdir(path + 'jpg/' + name)]:
     n = len(os.listdir(path + 'jpg/' + foldername + '/'))
     print(foldername, n)

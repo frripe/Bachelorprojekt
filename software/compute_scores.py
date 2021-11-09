@@ -1,15 +1,13 @@
 import os
-import subprocess
 import cv2
 import imageio
+import tempfile
+import subprocess
 from PIL import Image
 
 import cpbd
 from metrics_and_training_code.laplacian_variance.blur_detection.detection import estimate_blur
 from metrics_and_training_code.laplacian_variance.blur_detection.detection import fix_image_size
-
-
-extra_img_path = 'extra_images/'
 
 def _comp_lv(img):
     if 'png' in img or 'jpg' in img:
@@ -19,26 +17,28 @@ def _comp_lv(img):
         # print('lv   ', str(score))
         return score
     # format image
-    image = Image.open(img)
-    img = extra_img_path + os.path.splitext(os.path.basename(img))[0] + '.png'
-    image.save(img)
-    image = cv2.imread(img)
-    image = fix_image_size(image)
-    score = float(estimate_blur(image)[1])
-    os.remove(img)
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        image = Image.open(img)
+        img = tmpdirname + os.path.splitext(os.path.basename(img))[0] + '.png'
+        image.save(img)
+        image = cv2.imread(img)
+        image = fix_image_size(image)
+        score = float(estimate_blur(image)[1])
+        # os.remove(img)
     return score
 
 def _comp_hf(img):
     if 'jpg' in img:
         score = float(subprocess.check_output(['./metrics_and_training_code/Histogram-Frequency-based/marichal-ma-zhang', '-d=1', '-h=0.085', '-t=0', img]).decode())
-        print('hf   ', str(score))
+        # print('hf   ', str(score))
         return score
     # format image
-    image = Image.open(img)
-    img = extra_img_path + os.path.splitext(os.path.basename(img))[0] + '.jpg'
-    image.save(img)
-    score = float(subprocess.check_output(['./metrics_and_training_code/Histogram-Frequency-based/marichal-ma-zhang', '-d=1', '-h=0.085', '-t=0', img]).decode())
-    os.remove(img)
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        image = Image.open(img)
+        img = tmpdirname + os.path.splitext(os.path.basename(img))[0] + '.jpg'
+        image.save(img)
+        score = float(subprocess.check_output(['./metrics_and_training_code/Histogram-Frequency-based/marichal-ma-zhang', '-d=1', '-h=0.085', '-t=0', img]).decode())
+        # os.remove(img)
     return score
 
 def _comp_cpbd(img):
@@ -48,13 +48,14 @@ def _comp_cpbd(img):
         # print('cpbd ', str(score))
         return score
     # format image
-    image = Image.open(img)
-    img = extra_img_path + os.path.splitext(os.path.basename(img))[0] + '.bmp'
-    image.save(img)
-    image = imageio.imread(img, pilmode='L')
-    score = float(cpbd.compute(image))
-    os.remove(img)
-    print('cpbd ', str(score))
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        image = Image.open(img)
+        img = tmpdirname + os.path.splitext(os.path.basename(img))[0] + '.bmp'
+        image.save(img)
+        image = imageio.imread(img, pilmode='L')
+        score = float(cpbd.compute(image))
+        # os.remove(img)
+        # print('cpbd ', str(score))
     return score
 
 def compute_scores(metric, directory):
@@ -79,7 +80,7 @@ def compute_scores(metric, directory):
     return scores
 
 def compute_score(metric, image_path):
-    print(image_path)
+    print(image_path, metric)
     if metric == 'metrics_and_training_code/laplacian_variance/output/jpg/':
         return _comp_lv(image_path)
     if metric == 'metrics_and_training_code/Histogram-Frequency-based/output/':

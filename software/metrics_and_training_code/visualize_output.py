@@ -64,10 +64,11 @@ def plot_conf(y_true, y_pred, threshold, fpr, quick, save=2):
     disp = metrics.ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=['blur', 'sharp'])
     disp.plot()
     if save==1:
-        ...
+        print("don't plot")
     #     plt.savefig(path + str(round(threshold, 3)) + '_output_conf_mat_' + name + '.png')
     #     plt.savefig('results/conf/' + name + '/output_conf_' + name + p_name + '.png')
     elif save==2:
+        print("save in 'test_results/")
         plt.savefig('test_results/quick_' + str(quick) + '_fpr_' + str(fpr) + '_threshold_' + str(round(threshold, 4)) + '_conf_mat.png')
     elif save ==3:
         plt.show()
@@ -89,7 +90,7 @@ def plot_roc(path, title, name, y_true, y_score):
     plt.savefig('results/roc/' + name + '/output_roc_' + name + p_name + '.png')
     return fpr, tpr, threshold
 
-def plot_box(path, title, name, sharp, blurry, gauss2, gauss3, gauss4, fpr=0, save=1, quick=0):
+def plot_box(path, title, name, sharp, blurry, gauss2, gauss3, gauss4, fpr=0, save=1, quick=False):
     plt.clf()
     plt.boxplot([sharp, blurry, gauss2, gauss3, gauss4], labels=['sharp', 'blurry', 'gauss2', 'gauss3', 'gauss4'])
     plt.title(title)

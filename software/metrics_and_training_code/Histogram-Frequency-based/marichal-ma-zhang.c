@@ -72,8 +72,8 @@ static int operate_on_image(char *path)
 	coeffp = jpeg_read_coefficients(&cinfo);
 
 
-    clock_t time_start;
-    time_start = clock();
+    clock_t time_start;   // added
+    time_start = clock(); // added
 
 	/* Note: only looking at the luma; assuming it's the first component. */
 	for(int i = 0; i < cinfo.comp_info[0].height_in_blocks; i++) {
@@ -85,13 +85,13 @@ static int operate_on_image(char *path)
 	printf("%f\n", compute_blur(histogram));
 	// output metadata XXX should be in IPTC etc
 
-	clock_t time_end = clock(); // added
-	if(store_time) {
-		FILE *time_file;
-	    time_file = fopen("Histogram-Frequency-based/output/time.txt", "a"); // added
+	clock_t time_end = clock(); 											  // added
+	if(store_time) { 														  // added
+		FILE *time_file; 													  // added
+	    time_file = fopen("Histogram-Frequency-based/output/time.txt", "a");  // added
 	    double time_total = (double)(time_end - time_start) / CLOCKS_PER_SEC; // added
-	    fprintf(time_file, "%f\n", time_total); // added // measured in seconds
-	}
+	    fprintf(time_file, "%f\n", time_total); 							  // added // measured in seconds
+	}																		  // added
 
 	// XXX also need to destroy coeffp?
 	jpeg_destroy_decompress(&cinfo);
