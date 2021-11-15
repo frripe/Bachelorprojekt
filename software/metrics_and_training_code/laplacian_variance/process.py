@@ -27,6 +27,7 @@ def parse_args():
 
     parser.add_argument('-v', '--verbose', action='store_true', help='set logging level to debug')
     parser.add_argument('-d', '--display', action='store_true', help='display images')
+    parser.add_argument('-n', '--notime', action='store_true', help='do not store computation time')
 
     return parser.parse_args()
 
@@ -67,12 +68,13 @@ if __name__ == '__main__':
 
     results = []
 
-    if 'png' in args.images[0]:
-        file_object = open('laplacian_variance/output/png/time.txt', 'a') # added
-    elif 'jpg' in args.images[0]:
-        file_object = open('laplacian_variance/output/jpg/time.txt', 'a') # added
-    else:
-        file_object = open('laplacian_variance/output/time.txt', 'a') # added
+    if not args.notime:    
+        if 'png' in args.images[0]:
+            file_object = open('laplacian_variance/output/png/time.txt', 'a') # added
+        elif 'jpg' in args.images[0]:
+            file_object = open('laplacian_variance/output/jpg/time.txt', 'a') # added
+        else:
+            file_object = open('laplacian_variance/output/time.txt', 'a') # added
 
     # for image_path in find_images(args.images):
     ims = []                            # added
@@ -91,7 +93,8 @@ if __name__ == '__main__':
         else:
             logging.warning('not normalizing image size for consistent scoring!')
 
-        time_start = time.time() # added
+        if not args.notime:
+            time_start = time.time() # added
         blur_map, score, blurry = estimate_blur(image, threshold=args.threshold)
 
         #logging.info(f'image_path: {image_path} score: {score} blurry: {blurry}')
@@ -99,8 +102,9 @@ if __name__ == '__main__':
         if score > 1.1:
             print(image_path)
         #results.append({'input_path': str(image_path), 'score': score, 'blurry': blurry})
-        time_end = time.time() # added
-        file_object.write(str(time_end - time_start) + "\n") # added # measured in seconds
+        if not args.notime:
+            time_end = time.time() # added
+            file_object.write(str(time_end - time_start) + "\n") # added # measured in seconds
 
         if args.display:
             cv2.imshow('input', cv2.resize(image, (540, 540)))

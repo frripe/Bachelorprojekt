@@ -1,6 +1,7 @@
 # python3 visualize_stats.py cpbd/output/
 import re
 import bisect
+import metrics
 
 def _extract_data(path):
     threshold, TPR, FPR, TNR, PPV, ACC, F1 = [], [], [], [], [], [], []
@@ -32,21 +33,13 @@ def _extract_data(path):
     return threshold, TPR, FPR, TNR, PPV, ACC, F1
 
 def _find_thresh_multiple(fpr):
-    threshold, f1, metric = 0, 0, ''
-    for name in [
-        'metrics_and_training_code/laplacian_variance/output/jpg/',
-        'metrics_and_training_code/Histogram-Frequency-based/output/',
-        'metrics_and_training_code/cpbd/output/',
-        'metrics_and_training_code/merge_metrics/cpbd_lv_jpg/many_alpha/alpha_4/',
-        'metrics_and_training_code/merge_metrics/cpbd_HF/many_alpha/alpha_2/',
-        'metrics_and_training_code/merge_metrics/HF_lv_jpg/many_alpha/alpha_7/',
-        'metrics_and_training_code/merge_metrics/cpbd_HF_lv_jpg/many_alpha/alpha_2_6/',
-    ]:
-        threshold_new, f1_new = _find_thresh(fpr, name)
+    threshold, f1, metric = 0, 0, 0
+    for index in range(0, len(metrics.metrics)):
+        threshold_new, f1_new = _find_thresh(fpr, metrics.metrics[index])
         if f1_new > f1:
             threshold, f1 = threshold_new, f1_new
-            metric = name
-    return threshold, metric
+            metric = index
+    return threshold, metric # metric index (int)
 
 def _find_thresh(fpr, path):
     threshold, TPR, FPR, TNR, PPV, ACC, F1 = _extract_data(path)
@@ -58,5 +51,5 @@ def _find_thresh(fpr, path):
 
 def find_threshold(fpr=0.1, quick=False):
     if quick:
-        return _find_thresh(fpr, 'metrics_and_training_code/Histogram-Frequency-based/output/')[0], 'metrics_and_training_code/Histogram-Frequency-based/output/'
+        return _find_thresh(fpr, 'metrics_and_training_code/Histogram-Frequency-based/output/')[0], metrics.string_to_index('metrics_and_training_code/Histogram-Frequency-based/output/')
     return _find_thresh_multiple(fpr)

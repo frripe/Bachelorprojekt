@@ -1,6 +1,7 @@
-# python3 run.py -t -q 1 -f 0.02
-# python3 run.py -t -q 0 -f 0.3 -i ../dataset/training/jpg/Blurry/
+# python3 run.py -t -q -f 0.02
+# python3 run.py -t -f 0.3 -i ../dataset/training/jpg/Blurry/
 
+import os
 import sys
 import argparse
 
@@ -17,10 +18,10 @@ from metrics_and_training_code.visualize_output import y_predicted
 
 def _parse_args():
     parser = argparse.ArgumentParser(description='run blur detection on test images')
-    parser.add_argument('-i', '--image_path', type=str, nargs='+', help='directory of images')
-    parser.add_argument('-f', '--fpr', type=float, default=0.1, help='tolerable FPR, default 10%')
-    parser.add_argument('-q', '--quick', action='store_true', help='use the fastest metric instead of the most accurate')
     parser.add_argument('-t', '--test', action='store_true', help='run on test data set and plot output')
+    parser.add_argument('-q', '--quick', action='store_true', help='use the fastest metric instead of the most accurate')
+    parser.add_argument('-f', '--fpr', type=float, default=0.1, help='tolerable FPR, default 10%')
+    parser.add_argument('-i', '--image_path', type=str, help='directory of images')
     # parser.set_defaults(test='spam')
     return parser.parse_args()
 
@@ -51,9 +52,15 @@ if __name__ == '__main__':
         if args.image_path:
             for path in args.image_path:
                 if args.quick:
-                    scores = compute_scores(hf, path)
+                    if path == '.':
+                        scores = compute_scores(hf, args.image_path)
+                    else:
+                        scores = compute_scores(hf, path)
                 else:
-                    scores = compute_scores(metric, path)
+                    if path == '.':
+                        scores = compute_scores(metric, args.image_path)
+                    else:
+                        scores = compute_scores(metric, path)
                 print(scores)
                 if(path in [test_data, '../dataset/training/jpg/', '../dataset/test/png/', '../dataset/training/png/']):
                     _plot_output(threshold, scores, metric, args.fpr, args.quick, 1)
@@ -65,4 +72,6 @@ if __name__ == '__main__':
             print(scores)
             _plot_output(threshold, scores, metric, args.fpr, args.quick)
     else: # run on input image from webcam
+        os.makedirs('app_blurry_images/', exist_ok=True)
+        os.makedirs('app_sharp_images/', exist_ok=True)
         run_webcam_application(args.quick, args.fpr, threshold, metric)

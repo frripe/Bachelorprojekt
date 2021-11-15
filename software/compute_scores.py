@@ -5,6 +5,7 @@ import tempfile
 import subprocess
 from PIL import Image
 
+import metrics
 import cpbd
 from metrics_and_training_code.laplacian_variance.blur_detection.detection import estimate_blur
 from metrics_and_training_code.laplacian_variance.blur_detection.detection import fix_image_size
@@ -14,7 +15,7 @@ def _comp_lv(img):
         image = cv2.imread(img)
         image = fix_image_size(image)
         score = float(estimate_blur(image)[1])
-        # print('lv   ', str(score))
+        print('lv   ', str(score))
         return score
     # format image
     with tempfile.TemporaryDirectory() as tmpdirname:
@@ -24,7 +25,6 @@ def _comp_lv(img):
         image = cv2.imread(img)
         image = fix_image_size(image)
         score = float(estimate_blur(image)[1])
-        # os.remove(img)
     return score
 
 def _comp_hf(img):
@@ -38,14 +38,12 @@ def _comp_hf(img):
         img = tmpdirname + os.path.splitext(os.path.basename(img))[0] + '.jpg'
         image.save(img)
         score = float(subprocess.check_output(['./metrics_and_training_code/Histogram-Frequency-based/marichal-ma-zhang', '-d=1', '-h=0.085', '-t=0', img]).decode())
-        # os.remove(img)
     return score
 
 def _comp_cpbd(img):
     if 'bmp' in img:
         img = imageio.imread(img, pilmode='L')
         score = float(cpbd.compute(img))
-        # print('cpbd ', str(score))
         return score
     # format image
     with tempfile.TemporaryDirectory() as tmpdirname:
@@ -54,11 +52,11 @@ def _comp_cpbd(img):
         image.save(img)
         image = imageio.imread(img, pilmode='L')
         score = float(cpbd.compute(image))
-        # os.remove(img)
-        # print('cpbd ', str(score))
+        print('cpbd ', str(score))
     return score
 
 def compute_scores(metric, directory):
+    print(directory)
     content = os.listdir(directory)
     paths = [path for path in content if os.path.isdir(directory + path)]
     all_scores = {}
@@ -73,6 +71,8 @@ def compute_scores(metric, directory):
             all_scores[path] = scores
         return all_scores
     scores = []
+    if directory == '.':
+        directory = ''
     for img in content:
         score = compute_score(metric, directory + img)
         print(score)
@@ -80,7 +80,9 @@ def compute_scores(metric, directory):
     return scores
 
 def compute_score(metric, image_path):
-    print(image_path, metric)
+    metric = metrics.index_to_string(metric)
+    print("         Image: " + str(image_path))
+    # print(image_path, metric)
     if metric == 'metrics_and_training_code/laplacian_variance/output/jpg/':
         return _comp_lv(image_path)
     if metric == 'metrics_and_training_code/Histogram-Frequency-based/output/':
