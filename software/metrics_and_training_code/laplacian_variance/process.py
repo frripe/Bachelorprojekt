@@ -68,7 +68,7 @@ if __name__ == '__main__':
 
     results = []
 
-    if not args.notime:    
+    if not args.notime:
         if 'png' in args.images[0]:
             file_object = open('laplacian_variance/output/png/time.txt', 'a') # added
         elif 'jpg' in args.images[0]:
@@ -99,8 +99,8 @@ if __name__ == '__main__':
 
         #logging.info(f'image_path: {image_path} score: {score} blurry: {blurry}')
         print(score)
-        if score > 1.1:
-            print(image_path)
+        # if score > 1.1:
+        #     print(image_path)
         #results.append({'input_path': str(image_path), 'score': score, 'blurry': blurry})
         if not args.notime:
             time_end = time.time() # added

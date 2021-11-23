@@ -36,15 +36,15 @@ def run_mirror(fr, to, folder, synth_folder):
             image_mir.save('original/' + t + '/' + synth_folder + '/' + str(i).zfill(4) + '.' + t)
             image_flip.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)).zfill(4) + '.' + t)
             image_flip_mir.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*2).zfill(4) + '.' + t)
-            for a in(1, 3):
-                image_rot1 = image.rotate(5)
-                image_rot2 = image.rotate(-5)
-                image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*3).zfill(4) + '.' + t)
-                image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*4).zfill(4) + '.' + t)
-                image_rot1 = image.rotate(2*5)
-                image_rot2 = image.rotate(-2*5)
-                image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*5).zfill(4) + '.' + t)
-                image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*6).zfill(4) + '.' + t)
+            # for a in(1, 3):
+            image_rot1 = image.rotate(5)
+            image_rot2 = image.rotate(-5)
+            image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*3).zfill(4) + '.' + t)
+            image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*4).zfill(4) + '.' + t)
+            image_rot1 = image.rotate(2*5)
+            image_rot2 = image.rotate(-2*5)
+            image_rot1.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*5).zfill(4) + '.' + t)
+            image_rot2.save('original/' + t + '/' + synth_folder + '/' + str(i+(to-1)*6).zfill(4) + '.' + t)
 
 # apply blur to all images with no problems
 def run_gaussian(sigma, truncate):
@@ -80,5 +80,5 @@ run_mirror(1, 48, 'Blurry',     'synth_blurry')
 run_mirror(1, 35, 'NoProblems', 'synth_no_problems')
 #run_mirror(1, 21, 'NoVisibleMembrane', 'synth_no_visible_membrane')
 run_gaussian(s,     get_truncate(s, r))
-run_gaussian(s*1.5, get_truncate(s*2, r))
-run_gaussian(s*2,   get_truncate(s*4, r))
+run_gaussian(s*1.5, get_truncate(s*1.5, r))
+run_gaussian(s*2,   get_truncate(s*2, r))

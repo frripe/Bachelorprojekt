@@ -8,11 +8,6 @@ mv cpbd/output/out_synth_no_problems.txt cpbd/output/out_synth_no_problems_old.t
 mv cpbd/output/out_synth_blurry.txt cpbd/output/out_synth_blurry_old.txt
 
 
-#for b in {1..5}; do
-#    c=$(echo $b\*0.05 | bc)
-#    for t in {0..5}; do
-#        echo $t
-#        a=$(echo 0.002+$t\*0.01 | bc)
 for a in 0.002 0.01 0.02 0.1 0.2 0.4; do
     for c in 0.003 0.03 0.08 0.3 3. 4.; do
         echo $a
