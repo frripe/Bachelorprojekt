@@ -1,11 +1,15 @@
-pip3 install pysimplegui
+sudo apt install python3-pip
+pip install wheel
+pip install setuptools
+pip install twine
+cd software/metrics_and_training_code/cpbd/
+python3 setup.py bdist_wheel
+pip install --force-reinstall dist/cpbd-1.0.7-py3-none-any.whl
+cd ../../../
+pip install pysimplegui
 sudo apt-get install python3-tk
-#pip3 install virtualenv
-#apt install python3.8-venv
-
-pillow
-cv2
-g++?
-jam
-
+pip install Pillow
+pip install -U scikit-learn
+pip install imageio
+pip install opencv-python
 

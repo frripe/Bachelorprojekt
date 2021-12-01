@@ -11,8 +11,8 @@ from math import atan2, pi
 from sys import argv
 
 import numpy as np
-from imageio import imread
 from skimage.feature import canny
+from imageio import imread
 
 from cpbd.octave import sobel
 
@@ -30,11 +30,11 @@ BLOCK_HEIGHT, BLOCK_WIDTH = (64, 64)
 WIDTH_JNB = np.concatenate([5*np.ones(51), 3*np.ones(205)])
 
 
-def compute(image, t, b):
-    global THRESHOLD
-    THRESHOLD = t
-    global BETA
-    BETA = b
+def compute(image): #, t, b):
+    # global THRESHOLD
+    # THRESHOLD = t
+    # global BETA
+    # BETA = b
 
     # type: (numpy.ndarray) -> float
     """Compute the sharpness metric for the given data."""
